@@ -9,6 +9,7 @@ city_sustainability
 # Author(s)
 Caleb Gener
 Het Patel
+Ramon Ferrer
 
 # Database description
 This project will aim to help create sustainable cities. I want to store data about cities. The cities will be identified using a unique ID, 
