@@ -23,7 +23,7 @@ Description: The city_population is the amount of people that the city has livin
 Maximum: M-1. city_population is NOT unique and multiple cities can have the same population. However, each city can only have one value for population.
 
 **population_density**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: The population_density is the number of people per square mile of land area.\
 Maximum: M-1. population_density is NOT unique and multiple cities can have the same population density. However, each city can only have one value for population density.
 
@@ -77,7 +77,7 @@ Description: industry_type is a name that describes the type of industry. For ex
 Maximum: M-M. Multiple industries can have the same industry_type and industries can have multiple industry_types (e.g. tech and healthcare).
 
 **industry_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: industry_emission is a number that describes the amount of CO2 emissions the industry produces.\
 Maximum: M-1. Multiple industries can have the same industry_emission value, but each industry can only have one value for industry_emission.
 
@@ -128,22 +128,22 @@ Description: city_id refers to the city the C.E.T is part of. This value can be 
 Maximum: 1-1. Since each C.E.T can only be part of one city, no C.E.Ts will have the same city_id. Each C.E.T can only have one city_id.
 
 **base_year**\
-Data Type: DATE\
+Data Type: YEAR\
 Description: base_year refers to the year that the C.E.T is being started. For example, if Chicago was starting its C.E.T in 2022, the base_year would be 2022.\
 Maximum: M-1. Multiple C.E.Ts can have the same base_year, but each C.E.T can only have one base_year.
 
 **base_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: base_emission refers to the amount of CO2 emissions the city has when the C.E.T is being started.\
 Maximum: M-1. Multiple C.E.Ts can have the same base_emission, but each C.E.T can only have one base_emission.
 
 **target_year**\
-Data Type: DATE\
+Data Type: YEAR\
 Description: target_year refers to the year that the C.E.T is planning to be finished by. For example, if Chicago wanted to accomplish its C.E.T by 2030, the target_year would be 2030.\
 Maximum: M-1. Multiple C.E.Ts can have the same target_year, but each C.E.T can only have one target_year.
 
 **target_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: target_emission refers to the amount of CO2 emissions the city is planning to reach by the target year.\
 Maximum: M-1. Multiple C.E.Ts can have the same target_emission, but each C.E.T can only have one target_emission.
 
@@ -170,7 +170,7 @@ Description: car_population refers to the amount of people that use cars as thei
 Maximum: M-1. Multiple transportations can have the same car_population, but each transportation can only have one value for car_population.
 
 **car_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: car_emission refers to the amount of CO2 emissions the car population is producing.\
 Maximum: M-1. Multiple transportations can have the same car_emission value, but each transportation can only have one value for car_emission.
 
@@ -180,7 +180,7 @@ Description: public_usage refers to the amount of people that use public transpo
 Maximum: M-1. Multiple transportations can have the same public_usage, but each transportation can only have one value for public_usage.
 
 **public_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: public_emission refers to the amount of CO2 emissions public transportation produces.\
 Maximum: M-1. Multiple transportations can have the same public_emission, but each transportation can only have one value for public_emission.
 
@@ -202,17 +202,17 @@ Description: city_id refers to the city that the energy_management is a part of.
 Maximum: 1-1. Since each energy_management can only be part of one city, no energy_management will have the same city_id. Each energy_management can only have one city_id.
 
 **energy_production**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: energy_production refers to the amount of energy a city produces.\
 Maximum: M-1. Multiple energy_managements can have the same energy_production, but each energy_production can only have one value for energy_production.
 
 **energy_consumption**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: energy_consumption refers to the amount of energy a city uses.\
 Maximum: M-1. Multiple energy_managements can have the same energy_consumption, but each energy_management can only have one value for energy_consumption.
 
 **energy_emission**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: energy_emission refers to the amount of CO2 emissions the energy_consumption and energy_production produces.\
 Maximum: M-1. Multiple energy_managements can have the same energy_emission, but each energy_management can only have one value for energy_emission.
 
@@ -234,12 +234,12 @@ Description: city_id refers to the city that the waste_management is a part of.\
 Maximum: 1-1. Since each waste_management can only be part of one city, no waste_management will have the same city_id. Each waste_management can only have one city_id.
 
 **pollution_rate**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: pollution_rate refers to the amount of pollution a city has.\
 Maximum: M-1. Multiple waste_managements can have the same pollution_rate, but each waste_management can only have one value for pollution_rate.
 
 **recycle_rate**\
-Data Type: INTEGER\
+Data Type: FLOAT\
 Description: recycle_rate refers to the amount of recycling that a city does.\
 Maximum: M-1. Multiple waste_managements can have the same pollution_rate, but each waste_management can only have one value for recycle_rate.
 
