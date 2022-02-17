@@ -20,7 +20,7 @@ Maximum: M-1. city_name is NOT unique and multiple cities can have the same name
 **city_population**\
 Data Type: INTEGER\
 Description: The city_population is the amount of people that the city has living within it.\
-Maximum: M-1. city_population is NOT unique and multiple cities can have the same population. However, each city can only have one value for population
+Maximum: M-1. city_population is NOT unique and multiple cities can have the same population. However, each city can only have one value for population.
 
 **population_density**\
 Data Type: INTEGER\
@@ -30,7 +30,7 @@ Maximum: M-1. population_density is NOT unique and multiple cities can have the 
 **country_id (FK)**\
 Data Type: INTEGER\
 Description: The country_id refers to the country the city is in. This value can be used to join the city table with the country table.\
-Maximum: M-1. Although country_id is 1-1, multiple cities can be in the same country (have the same country_id). Each city can only have one country_id
+Maximum: M-1. Although country_id is 1-1, multiple cities can be in the same country (have the same country_id). Each city can only have one country_id.
 
 **Entity Name: country**
 
@@ -47,7 +47,7 @@ Maximum: 1-1. The ID is unique and each ID can only describe one city.
 **country_name**\
 Data Type: VARCHAR(50)\
 Description: country_name is the name of the country.\
-Maximum: M-1. country_name is NOT unique and multiple countries can have the same name. However, each country can only have one name
+Maximum: M-1. country_name is NOT unique and multiple countries can have the same name. However, each country can only have one name.
 
 **country_population**\
 Data Type: INTEGER\
@@ -58,7 +58,7 @@ Maximum: M-1. Multiple countries can have the same population, but each country 
 
 Synonyms: Manufacturing, Production, Fabrication
 
-Description: An industry is a branch of an economy. An industry can be part of one country. An industry can also own one or more companies
+Description: An industry is a branch of an economy. An industry can be part of one country. An industry can also own one or more companies.
 
 Attributes:\
 **ID (PK)**\
@@ -69,17 +69,17 @@ Maximum: 1-1. The ID is unique and each ID can only describe one industry.
 **country_id (FK)**\
 Data Type: INTEGER\
 Description: country_id refers to the country the industry is in. This value can be used to join the industry table with the country table.\
-Maximum: M-1. Although country_id is 1-1, multiple industries can be in the same country (have the same country_id). Each industry can only have one country_id
+Maximum: M-1. Although country_id is 1-1, multiple industries can be in the same country (have the same country_id). Each industry can only have one country_id.
 
 **industry_type**\
 Data Type: VARCHAR(50)\
 Description: industry_type is a name that describes the type of industry. For example, an industry can be the tech industry.\
-Maximum: M-M. Multiple industries can have the same industry_type and industries can have multiple industry_types (e.g. tech and healthcare)
+Maximum: M-M. Multiple industries can have the same industry_type and industries can have multiple industry_types (e.g. tech and healthcare).
 
 **industry_emission**\
 Data Type: INTEGER\
 Description: industry_emission is a number that describes the amount of CO2 emissions the industry produces.\
-Maximum: M-1. Multiple industries can have the same industry_emission value, but each industry can only have one value for industry_emission
+Maximum: M-1. Multiple industries can have the same industry_emission value, but each industry can only have one value for industry_emission.
 
 **Entity Name: company**
 
@@ -91,12 +91,12 @@ Attributes:\
 **ID (PK)**\
 Data Type: INTEGER\
 Description: ID is the primary key for the company entity. Each company will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one industry
+Maximum: 1-1. The ID is unique and each ID can only describe one industry.
 
 **industry_id (FK)**\
 Data Type: INTEGER\
 Description: industry_id refers to the industry that the company is a part of. This value can be used to join the company table with the industry table.\
-Maximum: M-1. Although industry_id is 1-1, multiple companies can be in the same industry (have the same industry_id). Each company can only have one industry_id
+Maximum: M-1. Although industry_id is 1-1, multiple companies can be in the same industry (have the same industry_id). Each company can only have one industry_id.
 
 **company_name**\
 Data Type: VARCHAR(50)\
@@ -106,7 +106,7 @@ Maximum: M-1. Multiple companies can have the same name, but each company can on
 **company_emission**\
 Data Type: INTEGER\
 Description: company_emission refers to the amount of CO2 emissions the company produces.\
-Maximum: M-1. Multiple companies can have the same company_emissions, but each company can only have one value for company_emission
+Maximum: M-1. Multiple companies can have the same company_emissions, but each company can only have one value for company_emission.
 
 **Entity Name: carbon_emission_target**
 
@@ -114,18 +114,18 @@ Maximum: M-1. Multiple companies can have the same company_emissions, but each c
 
 Synonyms: carbon_emission_goals, carbon_emission_objective
 
-Description: carbon_emission_target is the plan that a city has to reduce CO2 emissions. A C.E.T must have 1 city it is a part of. A C.E.T can also have one or more transportation entites
+Description: carbon_emission_target is the plan that a city has to reduce CO2 emissions. A C.E.T must have 1 city it is a part of. A C.E.T can also have one or more transportation entites.
 
 Attributes:\
 **ID (PK)**\
 Data Type: INTEGER\
 Description: ID is the primary key for the C.E.T entity. Each C.E.T will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one C.E.T
+Maximum: 1-1. The ID is unique and each ID can only describe one C.E.T.
 
 **city_id (FK)**\
 Data Type: INTEGER\
 Description: city_id refers to the city the C.E.T is part of. This value can be used to join the C.E.T table with the city table.\
-Maximum: 1-1. Since each C.E.T can only be part of one city, no C.E.Ts will have the same city_id. Each C.E.T can only have one city_id
+Maximum: 1-1. Since each C.E.T can only be part of one city, no C.E.Ts will have the same city_id. Each C.E.T can only have one city_id.
 
 **base_year**\
 Data Type: DATE\
@@ -157,12 +157,12 @@ Attributes:\
 **ID (PK)**\
 Data Type: INTEGER\
 Description: ID is the primary key for the transporation entity. Each transportation will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one transportation
+Maximum: 1-1. The ID is unique and each ID can only describe one transportation.
 
 **target_id (FK)**\
 Data Type: INTEGER\
-Description: target_id refers to the C.E.T that the transportation is part of. This value can be used to join the transporation table with the C.E.T table\
-Maximum: 1-1. Since each transportation can only be part of one C.E.T, no transportation will have the same target_id. Each transportation can only have one target_id
+Description: target_id refers to the C.E.T that the transportation is part of. This value can be used to join the transporation table with the C.E.T table.\
+Maximum: 1-1. Since each transportation can only be part of one C.E.T, no transportation will have the same target_id. Each transportation can only have one target_id.
 
 **car_population**\
 Data Type: INTEGER\
@@ -182,7 +182,7 @@ Maximum: M-1. Multiple transportations can have the same public_usage, but each 
 **public_emission**\
 Data Type: INTEGER\
 Description: public_emission refers to the amount of CO2 emissions public transportation produces.\
-Maximum: M-1. Multiple transportations can have the same public_emission, but each transportation can only have one value for public_emission
+Maximum: M-1. Multiple transportations can have the same public_emission, but each transportation can only have one value for public_emission.
 
 **Entity Name: energy_management**
 
@@ -194,17 +194,17 @@ Attributes:\
 **ID (PK)**\
 Data Type: INTEGER\
 Description: ID is the primary key for energy_management. Each energy_management will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one energy_management
+Maximum: 1-1. The ID is unique and each ID can only describe one energy_management.
 
 **city_id (FK)**\
 Data Type: INTEGER\
 Description: city_id refers to the city that the energy_management is a part of.\
-Maximum: 1-1. Since each energy_management can only be part of one city, no energy_management will have the same city_id. Each energy_management can only have one city_id
+Maximum: 1-1. Since each energy_management can only be part of one city, no energy_management will have the same city_id. Each energy_management can only have one city_id.
 
 **energy_production**\
 Data Type: INTEGER\
 Description: energy_production refers to the amount of energy a city produces.\
-Maximum: M-1. Multiple energy_managements can have the same energy_production, but each energy_production can only have one value for energy_production
+Maximum: M-1. Multiple energy_managements can have the same energy_production, but each energy_production can only have one value for energy_production.
 
 **energy_consumption**\
 Data Type: INTEGER\
@@ -226,12 +226,12 @@ Attributes:\
 **ID (PK)**\
 Data Type: INTEGER\
 Description: ID is the primary key for waste_management. Each waste_management will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one waste_management
+Maximum: 1-1. The ID is unique and each ID can only describe one waste_management.
 
 **city_id (FK)**\
 Data Type: INTEGER\
 Description: city_id refers to the city that the waste_management is a part of.\
-Maximum: 1-1. Since each waste_management can only be part of one city, no waste_management will have the same city_id. Each waste_management can only have one city_id
+Maximum: 1-1. Since each waste_management can only be part of one city, no waste_management will have the same city_id. Each waste_management can only have one city_id.
 
 **pollution_rate**\
 Data Type: INTEGER\
@@ -247,7 +247,7 @@ Maximum: M-1. Multiple waste_managements can have the same pollution_rate, but e
 
 Synonyms: client, subscriber
 
-Description: user refers to the users that use the database
+Description: user refers to the users that use the database. Each user must live in a country.
 
 Attributes:\
 **email (PK)**\
@@ -258,7 +258,7 @@ Maximum: 1-1. The email is unique and each email can only describe one user.
 **country_id (FK)**\
 Data Type: INTEGER\
 Description: country_id refers to the country that the user lives in.\
-Maximum: M-1. Although country_id is 1-1, multiple users can be in the same country (have the same country_id). Each user can only have one country_id
+Maximum: M-1. Although country_id is 1-1, multiple users can be in the same country (have the same country_id). Each user can only have one country_id.
 
 **username**\
 Data Type: VARCHAR(50)\
@@ -282,6 +282,6 @@ Maximum: M-1. Multiple users can have the same name, but each user can only have
 - company is dependent on industry. Each company must belong to one or more industries.
 - industry is dependent on country. Each industry must be incorporated by one country.
 - energy_management is dependent on city. Each energy_management must be used by one city.
-- waste_management is dependent on city. Each waste_management must be managed by one city
+- waste_management is dependent on city. Each waste_management must be managed by one city.
 - city is dependent on country. Each city must exist in one country.
 - user is dependent on country. Each user must live in one country.
