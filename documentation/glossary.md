@@ -7,10 +7,10 @@ Synonyms: Area
 Description: A city is a place within a country. There can be multiple cities within one country, and each city can only be part of one country. A city also uses one energy_management and one waste_management. A city may or may not contain a carbon_emission_target.
 
 Attributes:\
-**ID (PK)**\
+**city_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the city entity. Each city will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one city.
+Description: city_id is the primary key for the city entity. Each city will have a unique city_id that it can be identified with.\
+Maximum: 1-1. The city_id is unique and each ID can only describe one city.
 
 **city_name**\
 Data Type: VARCHAR(50)\
@@ -39,10 +39,10 @@ Synonyms: Nation, State
 Description: A country is place. A country can have multiple cities exist within it. A country can have one or more industries. A country can also have many users living in the country.
 
 Attributes:\
-**ID (PK)**\
+**country_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the country entity. Each country will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one city.
+Description: country_id is the primary key for the country entity. Each country will have a unique country_id that it can be identified with.\
+Maximum: 1-1. The country_id is unique and each country_id can only describe one city.
 
 **country_name**\
 Data Type: VARCHAR(50)\
@@ -61,10 +61,10 @@ Synonyms: Manufacturing, Production, Fabrication
 Description: An industry is a branch of an economy. An industry can be part of one country. An industry can also own one or more companies.
 
 Attributes:\
-**ID (PK)**\
+**industry_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the industry entity. Each industry will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one industry.
+Description: industry_id is the primary key for the industry entity. Each industry will have a unique industry_id that it can be identified with.\
+Maximum: 1-1. The industry_id is unique and each industry_id can only describe one industry.
 
 **country_id (FK)**\
 Data Type: INTEGER\
@@ -88,9 +88,9 @@ Synonyms: Business, Corporation
 Description: A company is an entity that is part of an industry. A city can be part of one or more industries.
 
 Attributes:\
-**ID (PK)**\
+**company_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the company entity. Each company will have a unique ID that it can be identified with.\
+Description: company_id is the primary key for the company entity. Each company will have a unique company_id that it can be identified with.\
 Maximum: 1-1. The ID is unique and each ID can only describe one industry.
 
 **industry_id (FK)**\
@@ -117,10 +117,10 @@ Synonyms: carbon_emission_goals, carbon_emission_objective
 Description: carbon_emission_target is the plan that a city has to reduce CO2 emissions. A C.E.T must have 1 city it is a part of. A C.E.T can also have one or more transportation entites.
 
 Attributes:\
-**ID (PK)**\
+**cet_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the C.E.T entity. Each C.E.T will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one C.E.T.
+Description: cet_id is the primary key for the C.E.T entity. Each C.E.T will have a unique cet_id that it can be identified with.\
+Maximum: 1-1. The cet_id is unique and each cet_id can only describe one C.E.T.
 
 **city_id (FK)**\
 Data Type: INTEGER\
@@ -154,9 +154,9 @@ Synonyms: Transit, Traffic
 Description: transportation is the way people in cities get around. Each transportation entity must have a C.E.T.
 
 Attributes:\
-**ID (PK)**\
+**transportation_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for the transporation entity. Each transportation will have a unique ID that it can be identified with.\
+Description: transportation_id is the primary key for the transporation entity. Each transportation will have a unique transportation_id that it can be identified with.\
 Maximum: 1-1. The ID is unique and each ID can only describe one transportation.
 
 **target_id (FK)**\
@@ -191,10 +191,10 @@ Synonyms: energy_production, energy_consumption
 Description: energy_management refers to how a city makes power, uses power, and the emissions that using the power creates. Each energy_management must be part of one city.
 
 Attributes:\
-**ID (PK)**\
+**em_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for energy_management. Each energy_management will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one energy_management.
+Description: em_id is the primary key for energy_management. Each energy_management will have a unique em_id that it can be identified with.\
+Maximum: 1-1. The em_id is unique and each em_id can only describe one energy_management.
 
 **city_id (FK)**\
 Data Type: INTEGER\
@@ -223,10 +223,10 @@ Synonyms: waste_production, waste_reduction
 Description: waste_management refers to how a city manages waste and pollution. Each waste_management must be part of one city. 
 
 Attributes:\
-**ID (PK)**\
+**wm_id (PK)**\
 Data Type: INTEGER\
-Description: ID is the primary key for waste_management. Each waste_management will have a unique ID that it can be identified with.\
-Maximum: 1-1. The ID is unique and each ID can only describe one waste_management.
+Description: wm_id is the primary key for waste_management. Each waste_management will have a unique wm_id that it can be identified with.\
+Maximum: 1-1. The wm_id is unique and each wm_id can only describe one waste_management.
 
 **city_id (FK)**\
 Data Type: INTEGER\
