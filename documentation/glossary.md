@@ -255,6 +255,11 @@ Data Type: VARCHAR(50)\
 Description: email is the primary key for user. Each user will have a unique email that they can be identified with.\
 Maximum: 1-1. The email is unique and each email can only describe one user.
 
+**country_id (FK)**\
+Data Type: INTEGER\
+Description: country_id refers to the country that the user lives in.\
+Maximum: M-1. Although country_id is 1-1, multiple users can be in the same country (have the same country_id). Each user can only have one country_id
+
 **username**\
 Data Type: VARCHAR(50)\
 Description: username is the user's username.\
@@ -270,3 +275,13 @@ Data Type: VARCHAR(50)\
 Description: name is the user's name.\
 Maximum: M-1. Multiple users can have the same name, but each user can only have one name.
 
+
+**Relationships**
+- transportation is dependent on carbon_emission_target. Each transportation is tracked by one carbon_emission_target.
+- carbon_emission_target is dependent on city. Each carbon_emission_target must be contained by a city.
+- company is dependent on industry. Each company must belong to one or more industries.
+- industry is dependent on country. Each industry must be incorporated by one country.
+- energy_management is dependent on city. Each energy_management must be used by one city.
+- waste_management is dependent on city. Each waste_management must be managed by one city
+- city is dependent on country. Each city must exist in one country.
+- user is dependent on country. Each user must live in one country.
