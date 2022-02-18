@@ -47,7 +47,7 @@ Maximum: 1-1. The country_id is unique and each country_id can only describe one
 **country_name**\
 Data Type: VARCHAR(50)\
 Description: country_name is the name of the country.\
-Maximum: M-1. country_name is NOT unique and multiple countries can have the same name. However, each country can only have one name.
+Maximum: 1-1. country_name is unique and multiple countries cannot have the same name. Each country can only have one name.
 
 **country_population**\
 Data Type: INTEGER\
