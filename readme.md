@@ -35,3 +35,16 @@ CRUD OPERATION FOR transportation
 ![tran_update](https://user-images.githubusercontent.com/89759491/158310450-b80dcfa9-5cf4-498c-a56f-8f7a0997e31c.jpg)
 ![tran_delete](https://user-images.githubusercontent.com/89759491/158310476-9f858a66-6392-4834-9776-033c6030a5ac.jpg)
 
+CRUD OPERATION FOR city
+![city menu](https://user-images.githubusercontent.com/70284164/158325683-de5a9add-110f-494d-8886-0a71a55ec315.png)
+![city create](https://user-images.githubusercontent.com/70284164/158325698-3d1d9651-89aa-463e-963c-72ac72e6d159.png)
+![city read](https://user-images.githubusercontent.com/70284164/158325708-0a1cab9c-9571-41ca-8158-280d5962ac8f.png)
+![city update](https://user-images.githubusercontent.com/70284164/158325714-ed47336d-cb35-47a0-99ae-72dcfd2edd87.png)
+![city delete](https://user-images.githubusercontent.com/70284164/158325734-226f1a0e-eccd-4f72-9e75-64040cdc419c.png)
+
+CRUD OPERATION FOR energy_management
+![em menu](https://user-images.githubusercontent.com/70284164/158326122-93cac501-c784-40e1-a67a-871e14ceb3e7.png)
+![em create](https://user-images.githubusercontent.com/70284164/158326134-b848fbc1-bc65-4242-bbde-6c254b127b4f.png)
+![em read](https://user-images.githubusercontent.com/70284164/158326142-f1ee0134-a5fa-4668-8fba-a967872071c2.png)
+![em update](https://user-images.githubusercontent.com/70284164/158326161-2e6afa08-3be7-41c3-821c-239e63af9aed.png)
+![em delete](https://user-images.githubusercontent.com/70284164/158326167-28ade955-b0a3-4441-8017-a4432b9abfe6.png)
