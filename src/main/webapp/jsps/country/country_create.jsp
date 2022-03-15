@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Create Counttry Entity:</h1>
+  <h1>Create Country Entity:</h1>
 <form action="<c:url value='/CountryServletCreate'/>" method="post">
 	country_id			:<input type="text" name="country_id" value="${form.country_id }"/>
 	<span style="color: red; font-weight: 900">${errors.country_id }</span>
