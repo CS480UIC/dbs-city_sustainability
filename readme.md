@@ -54,3 +54,11 @@ CRUD OPERATION FOR carbon_emissions_target
 <img width="1279" alt="cet create entity" src="https://user-images.githubusercontent.com/70537723/158355326-b2e7b84c-b51a-4fa0-9017-f39f0393ae21.png">
 <img width="1231" alt="cet read entity" src="https://user-images.githubusercontent.com/70537723/158356283-af4a6ff7-80cc-4e75-ad89-4ddb8a5a17c0.png">
 <img width="1087" alt="cet update entity" src="https://user-images.githubusercontent.com/70537723/158356292-6590e6c2-aefb-4acf-b0c5-bab47f4d868d.png">
+<img width="1020" alt="cet delete entity" src="https://user-images.githubusercontent.com/70537723/158357919-4e15a40d-5335-4e77-887a-011d60e5f3ed.png">
+
+CRUD OPERATION FOR waste_management
+<img width="1025" alt="wm entity" src="https://user-images.githubusercontent.com/70537723/158358051-0c8ad06d-3485-454e-9347-9b174114bc61.png">
+<img width="1009" alt="wm create entity" src="https://user-images.githubusercontent.com/70537723/158358084-bf2ebb97-0643-4491-bca0-5e193888ae18.png">
+<img width="1021" alt="wm read entity" src="https://user-images.githubusercontent.com/70537723/158358081-78059040-36a0-4025-995b-b3103ed12c33.png">
+<img width="986" alt="wm update entity" src="https://user-images.githubusercontent.com/70537723/158358080-738e65a0-7a72-46a6-a8c1-4957bae87af7.png">
+<img width="1106" alt="wm delete entity" src="https://user-images.githubusercontent.com/70537723/158358076-5ccb3068-0c35-404d-92dc-553bb0dcf977.png">
