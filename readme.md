@@ -64,7 +64,17 @@ CRUD OPERATION FOR waste_management (Het Patel)
 <img width="1106" alt="wm delete entity" src="https://user-images.githubusercontent.com/70537723/158358076-5ccb3068-0c35-404d-92dc-553bb0dcf977.png">
 
 CRUD OPERATION FOR industry (Bryan Zbojna)
+![crud_industry](https://user-images.githubusercontent.com/72435201/158485561-47cac0a9-c2f9-4058-b9f7-97dc1e381667.png)
+![industry_create](https://user-images.githubusercontent.com/72435201/158485572-bef0ac35-47f3-4387-8df0-e3949fd02f2e.png)
+![read_industry](https://user-images.githubusercontent.com/72435201/158485592-a2c1eaa9-ec98-4065-9d1a-16839c504dd5.png)
+![update_industry](https://user-images.githubusercontent.com/72435201/158485597-ad579574-fa09-4436-a114-7551abc12ac8.png)
+![delete_industry](https://user-images.githubusercontent.com/72435201/158485609-c3e751df-0e53-4ae1-978e-32fbf8c4e083.png)
 
 
 CRUD OPERATION FOR company (Bryan Zbojna)
+![crud_company](https://user-images.githubusercontent.com/72435201/158485628-05814d3a-26db-4a14-ac48-411da5174b39.png)
+![company_create](https://user-images.githubusercontent.com/72435201/158485643-d8b659c4-e586-47a3-95a7-90052cce34a3.png)
+![read_company](https://user-images.githubusercontent.com/72435201/158485655-0397f303-939c-473c-8a92-e3c80fda998d.png)
+![update_company](https://user-images.githubusercontent.com/72435201/158485677-aef0bd02-2300-4376-a036-6f8384880fe1.png)
+![delete_company](https://user-images.githubusercontent.com/72435201/158485686-006b50d0-7d72-4add-b260-84b62eb25c6c.png)
 
