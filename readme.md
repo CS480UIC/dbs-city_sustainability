@@ -21,7 +21,6 @@ population density can help show how many people are at risk from polluted citie
 Source of Carbon Emissions data. This data can be used to prioritize the actions being taken by the city.
 
 #Screenshots
-#CRUD for country entity:
 ![country_menu](https://user-images.githubusercontent.com/89759491/158309910-7b4b5b18-d19a-4e3a-bd4c-3c6ac031855b.jpg)
 ![country_create](https://user-images.githubusercontent.com/89759491/158309931-efc1b604-8093-4961-8be0-18ee0863da92.jpg)
 ![country_update](https://user-images.githubusercontent.com/89759491/158309948-b9a0a0f3-decc-4d15-b588-f948c32f9371.jpg)
