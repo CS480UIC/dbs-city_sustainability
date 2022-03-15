@@ -51,4 +51,4 @@ CRUD OPERATION FOR energy_management
 
 CRUD OPERATION FOR carbon_emissions_target
 <img width="1025" alt="cet menu" src="https://user-images.githubusercontent.com/70537723/158354458-b6c39acf-7b53-4a4a-8845-193d442e6524.png">
-
+<img width="1279" alt="cet create entity" src="https://user-images.githubusercontent.com/70537723/158355326-b2e7b84c-b51a-4fa0-9017-f39f0393ae21.png">
