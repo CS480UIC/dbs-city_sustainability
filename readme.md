@@ -48,3 +48,7 @@ CRUD OPERATION FOR energy_management
 ![em read](https://user-images.githubusercontent.com/70284164/158326142-f1ee0134-a5fa-4668-8fba-a967872071c2.png)
 ![em update](https://user-images.githubusercontent.com/70284164/158326161-2e6afa08-3be7-41c3-821c-239e63af9aed.png)
 ![em delete](https://user-images.githubusercontent.com/70284164/158326167-28ade955-b0a3-4441-8017-a4432b9abfe6.png)
+
+CRUD OPERATION FOR carbon_emissions_target
+<img width="1025" alt="cet menu" src="https://user-images.githubusercontent.com/70537723/158354458-b6c39acf-7b53-4a4a-8845-193d442e6524.png">
+
