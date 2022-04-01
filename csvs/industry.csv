@@ -1,0 +1,6 @@
+industry_id,country_id,industry_type,industry_emission
+1,1,Retail,2000
+2,1,Online Retail,2500
+3,2,Technology,2600
+4,2,Gasoline,3500
+5,3,Agriculture,2500

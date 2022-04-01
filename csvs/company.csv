@@ -1,0 +1,6 @@
+company_id,industry_id,company_name,company_emission
+1,1,Walmart,1000
+2,2,Amazon,1200
+3,3,Apple,1100
+4,4,Exxon Mobil,2500
+5,3,Microsoft,1500
