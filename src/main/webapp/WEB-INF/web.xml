@@ -2,51 +2,48 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>CS480 Demo</display-name>
-    <servlet>
+  <servlet>
     <description></description>
-    <display-name>Entity1ServletCreate</display-name>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletCreate</servlet-class>
+    <display-name>CompanyServletCreate</display-name>
+    <servlet-name>CompanyServletCreate</servlet-name>
+    <servlet-class>company.web.servlet.CompanyServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <url-pattern>/Entity1ServletCreate</url-pattern>
+    <servlet-name>CompanyServletCreate</servlet-name>
+    <url-pattern>/CompanyServletCreate</url-pattern>
   </servlet-mapping>
   
   <servlet>
     <description></description>
-    <display-name>Entity1ServletRead</display-name>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletRead</servlet-class>
+    <display-name>CompanyServletRead</display-name>
+    <servlet-name>CompanyServletRead</servlet-name>
+    <servlet-class>Company.web.servlet.CompanyServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <url-pattern>/Entity1ServletRead</url-pattern>
+    <servlet-name>CompanyServletRead</servlet-name>
+    <url-pattern>/CompanyServletRead</url-pattern>
   </servlet-mapping>
-  
-  
   
     <servlet>
     <description></description>
-    <display-name>Entity1ServletUpdate</display-name>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
+    <display-name>CompanyServletUpdate</display-name>
+    <servlet-name>CompanyServletUpdate</servlet-name>
+    <servlet-class>Company.web.servlet.CompanyServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <url-pattern>/Entity1ServletUpdate</url-pattern>
+    <servlet-name>CompanyServletUpdate</servlet-name>
+    <url-pattern>/CompanyServletUpdate</url-pattern>
   </servlet-mapping>
-  
   
     <servlet>
     <description></description>
-    <display-name>Entity1ServletDelete</display-name>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletDelete</servlet-class>
+    <display-name>CompanyServletDelete</display-name>
+    <servlet-name>CompanyServletDelete</servlet-name>
+    <servlet-class>Company.web.servlet.CompanyServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <url-pattern>/Entity1ServletDelete</url-pattern>
+    <servlet-name>CompanyServletDelete</servlet-name>
+    <url-pattern>/CompanyServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

@@ -21,8 +21,8 @@
   </head>
   
   <body>
-  <h1>Company Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+  <h1>Create Company</h1>
+<form action="<c:url value='/CompanyServletCreate'/>" method="post">
 	company_id: <input type="text" name="company_id" value="${form.company_id}"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
