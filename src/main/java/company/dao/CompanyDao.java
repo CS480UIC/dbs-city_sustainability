@@ -80,13 +80,13 @@ public class CompanyDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE company SET industry_id = ?, company_name = ?, company_emission = ? where id = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,form.getCompanyID());
-		    preparestatement.setInt(2,form.getIndustryID());
-		    preparestatement.setString(3,form.getCompanyName());
-		    preparestatement.setFloat(4, form.getCompanyEmission());
+		    preparestatement.setInt(1,form.getIndustryID());
+		    preparestatement.setString(2,form.getCompanyName());
+		    preparestatement.setFloat(3, form.getCompanyEmission());
+		    preparestatement.setInt(4,form.getCompanyID());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

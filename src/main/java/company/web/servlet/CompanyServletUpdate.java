@@ -43,13 +43,13 @@ public class CompanyServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		CompanyDao entity1dao = new CompanyDao();
-		Company entity1 = null;
+		CompanyDao companyDao = new CompanyDao();
+		Company newCompany = null;
 		
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = CompanyDao.findByCompanyID(Integer.parseInt(request.getParameter("id")));
+				newCompany = CompanyDao.findByCompanyID(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -59,18 +59,18 @@ public class CompanyServletUpdate extends HttpServlet {
 			}
 		
 //			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getCompanyID()!=null){
+			if(newCompany.getCompanyID()!=null){
 				System.out.println("11");
 
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+						System.out.println(newCompany);
+						request.setAttribute("entity1", newCompany);
+						request.getRequestDispatcher("/jsps/company/company_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "company not found");
+				request.getRequestDispatcher("/jsps/company/company_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -97,7 +97,7 @@ public class CompanyServletUpdate extends HttpServlet {
 			form.setCompanyID(Integer.parseInt(request.getParameter("id")));
 
 			try {
-				entity1dao.update(form);
+				companyDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

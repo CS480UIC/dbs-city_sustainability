@@ -17,7 +17,7 @@
     <description></description>
     <display-name>CompanyServletRead</display-name>
     <servlet-name>CompanyServletRead</servlet-name>
-    <servlet-class>Company.web.servlet.CompanyServletRead</servlet-class>
+    <servlet-class>company.web.servlet.CompanyServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CompanyServletRead</servlet-name>
@@ -28,7 +28,7 @@
     <description></description>
     <display-name>CompanyServletUpdate</display-name>
     <servlet-name>CompanyServletUpdate</servlet-name>
-    <servlet-class>Company.web.servlet.CompanyServletUpdate</servlet-class>
+    <servlet-class>company.web.servlet.CompanyServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CompanyServletUpdate</servlet-name>
@@ -39,7 +39,7 @@
     <description></description>
     <display-name>CompanyServletDelete</display-name>
     <servlet-name>CompanyServletDelete</servlet-name>
-    <servlet-class>Company.web.servlet.CompanyServletDelete</servlet-class>
+    <servlet-class>company.web.servlet.CompanyServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CompanyServletDelete</servlet-name>
