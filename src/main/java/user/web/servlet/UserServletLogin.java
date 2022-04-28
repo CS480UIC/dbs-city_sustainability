@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import user.dao.UserDao;
 import user.domain.User;
 import user.service.UserException;
-import user.service.UserService;
+import user.service.CountryService;
 
 /**
  * Servlet implementation class UserServlet
@@ -52,7 +52,7 @@ public class UserServletLogin extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		UserService userservice = new UserService();		
+		CountryService userservice = new CountryService();		
 		if(user.getUsername()!=null){
 			// PASSWORD VALIDATION
 			if(pwd.equals(user.getPassword()))

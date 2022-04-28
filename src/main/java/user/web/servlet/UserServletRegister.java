@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import user.domain.User;
 import user.service.UserException;
-import user.service.UserService;
+import user.service.CountryService;
 
 /**
  * Servlet implementation class UserServlet
@@ -42,7 +42,7 @@ public class UserServletRegister extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//Map<String, String> form = new HashMap<String,String>();
-		UserService userservice = new UserService();
+		CountryService userservice = new CountryService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		User form = new User();
 		List<String> info = new ArrayList<String>();

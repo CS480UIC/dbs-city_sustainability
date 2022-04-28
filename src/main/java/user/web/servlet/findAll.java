@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import user.service.UserService;
+import user.service.CountryService;
 
 /**
  * Servlet implementation class findAll
@@ -27,7 +27,7 @@ public class findAll extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		UserService userservice = new UserService();
+		CountryService userservice = new CountryService();
 		try {
 			request.setAttribute("UserList", userservice.findall());
 		} catch (InstantiationException | IllegalAccessException

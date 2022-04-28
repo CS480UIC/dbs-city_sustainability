@@ -79,6 +79,17 @@
     <url-pattern>/CompanyServletDelete</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>CountryServletDelete</display-name>
+    <servlet-name>CountryServletDelete</servlet-name>
+    <servlet-class>country.web.servlet.CountryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountryServletDelete</servlet-name>
+    <url-pattern>/CountryServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>UserServletRegister</display-name>
