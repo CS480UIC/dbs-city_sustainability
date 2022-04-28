@@ -23,10 +23,10 @@
   <body>
   <h1>Read Transporation Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/TransportationServletRead'/>" method="post">
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read transporation_id:  <input type="text" name="transporation_id" value="${form.transporation_id }"/>
-	<span style="color: red; font-weight: 900">${errors.transporation_id }</span>
+	Read transporation_id:  <input type="text" name="transporation_id" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
