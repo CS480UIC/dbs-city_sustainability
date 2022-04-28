@@ -13,6 +13,17 @@
     <url-pattern>/CompanyServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>CountryServletCreate</display-name>
+    <servlet-name>CountryServletCreate</servlet-name>
+    <servlet-class>country.web.servlet.CountryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountryServletCreate</servlet-name>
+    <url-pattern>/CountryServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>CompanyServletRead</display-name>
