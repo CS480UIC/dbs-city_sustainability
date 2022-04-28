@@ -52,21 +52,19 @@ public class CountryServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 			System.out.println(name + ": " + Arrays.toString(values));
-			System.out.println(info.add(values[0]));
+//			System.out.println(info.add(values[0]));
 		}
 		
 //		System.out.println("1");
 //		System.out.println(info);
 		
-		System.out.println("INFO CONTENTS: " + info);
+//		System.out.println("INFO CONTENTS: " + info);
 
 		form.setId(Integer.parseInt(info.get(0)));
 
-		form.setCountry_name(info.get(2));
-//		System.out.println(String.valueOf(info.get(1)));
+		form.setCountry_name(info.get(1));
 
-		form.setCountry_population(Float.parseFloat(info.get(4)));		
-//		System.out.println(Float.parseFloat(info.get(2)));
+		form.setCountry_population(Float.parseFloat(info.get(2)));		
 		
 		
 		try {
