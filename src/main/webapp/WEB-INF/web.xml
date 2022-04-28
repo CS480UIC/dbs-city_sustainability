@@ -24,6 +24,18 @@
     <url-pattern>/CountryServletCreate</url-pattern>
   </servlet-mapping>
   
+<servlet>
+    <description></description>
+    <display-name>FindNumericCity</display-name>
+    <servlet-name>FindNumericCity</servlet-name>
+
+    <servlet-class>user.web.servlet.FindNumericCity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindNumericCity</servlet-name>
+    <url-pattern>/FindNumericCity</url-pattern>
+  </servlet-mapping>
+  
     <servlet>
     <description></description>
     <display-name>CityServletCreate</display-name>
