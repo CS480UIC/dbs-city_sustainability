@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import country.domain.City;
+import country.domain.Country;
 import country.service.CountryException;
 import country.service.CountryService;
 
@@ -44,7 +44,7 @@ public class CountryServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		CountryService entity1service = new CountryService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		City form = new City();
+		Country form = new Country();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {

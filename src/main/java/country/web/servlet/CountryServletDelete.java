@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import country.dao.CountryDao;
-import country.domain.City;
+import country.domain.Country;
 //import country.service.CountryException;
 //import country.service.CountryService;
 /**
@@ -46,7 +46,7 @@ public class CountryServletDelete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
 		CountryDao countrydao = new CountryDao();
-		City country = null;
+		Country country = null;
 		if(method.equals("search"))
 		{
 			try {

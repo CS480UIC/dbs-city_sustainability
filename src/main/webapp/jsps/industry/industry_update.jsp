@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update Industry</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/IndustryServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Industry: <input type="text" name="industry_id" value="${form.industry_id }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Industry: <input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
 	<input type="submit" value="Update Industry"/>
 </form>

@@ -1,18 +1,18 @@
-package company.service;
+package industry.service;
 
-public class CompanyException extends Exception {
+public class IndustryException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public CompanyException() {
+	public IndustryException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public CompanyException(String message) {
+	public IndustryException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

@@ -6,7 +6,7 @@ package country.domain;
  * @author Aayush Makharia
  * 
  */
-public class City {
+public class Country {
 	/*
 	 * Correspond to the user table
 	 */

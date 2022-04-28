@@ -1,4 +1,4 @@
-package company.web.servlet;
+package industry.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import company.domain.Company;
-import company.service.CompanyException;
-import company.service.CompanyService;
+import industry.domain.Industry;
+import industry.service.IndustryException;
+import industry.service.IndustryService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CompanyServletCreate extends HttpServlet {
+public class IndustryServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CompanyServletCreate() {
+    public IndustryServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,9 +42,9 @@ public class CompanyServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CompanyService entity1service = new CompanyService();
+		IndustryService industryservice = new IndustryService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Company form = new Company();
+		Industry form = new Industry();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
@@ -52,30 +52,27 @@ public class CompanyServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 			System.out.println(name + ": " + Arrays.toString(values));
-			System.out.println(info.add(values[0]));
-
+//			System.out.println(info.add(values[0]));
 		}
+		
 //		System.out.println("1");
 //		System.out.println(info);
-
-		form.setCompanyID(Integer.parseInt(info.get(0)));
-//		System.out.println("1");
-
-		form.setIndustryID(Integer.parseInt(info.get(1)));
-//		System.out.println("2");
-
-		form.setCompanyName(info.get(2));
-		System.out.println("BREH" + info.get(2));
 		
-		form.setCompanyEmission(Float.parseFloat(info.get(3)));
+//		System.out.println("INFO CONTENTS: " + info);
+
+		form.setId(Integer.parseInt(info.get(0)));
+		form.setCountry_id(Integer.parseInt(info.get(1)));
+		form.setIndustry_type(info.get(2));
+		form.setIndustry_emission(Float.parseFloat(info.get(3)));		
 		
 		
 		try {
 			System.out.println("3");
-			entity1service.create(form);
+			//System.out.println("form CONTENTS: " + form);
+			industryservice.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | CompanyException e) {
+		} catch (ClassNotFoundException | IndustryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import country.dao.CountryDao;
-import country.domain.City;
+import country.domain.Country;
 //import entity1.service.CountryService;
 
 /**
@@ -44,7 +44,7 @@ public class CountryServletUpdate extends HttpServlet {
 //
 		String method = request.getParameter("method");
 		CountryDao countrydao = new CountryDao();
-		City country = null;
+		Country country = null;
 		
 		if(method.equals("search"))
 		{
@@ -76,7 +76,7 @@ public class CountryServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			City form = new City();
+			Country form = new Country();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {

@@ -1,4 +1,4 @@
-package company.web.servlet;
+package industry.web.servlet;
 
 import java.io.IOException;
 //import java.util.ArrayList;
@@ -14,21 +14,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import company.dao.CompanyDao;
-import company.domain.Company;
-//import entity1.service.Entity1Exception;
-//import entity1.service.Entity1Service;
+import industry.dao.IndustryDao;
+import industry.domain.Industry;
+//import industry.service.IndustryException;
+//import industry.service.IndustryService;
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CompanyServletDelete extends HttpServlet {
+public class IndustryServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CompanyServletDelete() {
+    public IndustryServletDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,13 +45,13 @@ public class CompanyServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		CompanyDao entity1dao = new CompanyDao();
-		Company entity1 = null;
+		IndustryDao industrydao = new IndustryDao();
+		Industry industry = null;
 		if(method.equals("search"))
 		{
 			try {
-//				entity1dao to Entity1Dao
-				entity1 = CompanyDao.findByCompanyID(Integer.parseInt(request.getParameter("id")));
+//				industrydao to IndustryDao
+				industry = IndustryDao.findIndustryId(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -60,22 +60,22 @@ public class CompanyServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			Entity1Service entity1service = new Entity1Service();		
-			if(entity1.getCompanyID()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
+//			IndustryService industryservice = new IndustryService();		
+			if(industry.getId()!=null){
+						System.out.println(industry);
+						request.setAttribute("industry", industry);
+						request.getRequestDispatcher("/jsps/industry/industry_delete_output.jsp").forward(request, response);
 					
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Industry not found");
+				request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1dao.delete(request.getParameter("username"));
+				industrydao.delete(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -84,7 +84,7 @@ public class CompanyServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
 		}
 	}
 }

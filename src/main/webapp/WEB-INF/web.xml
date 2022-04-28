@@ -26,13 +26,24 @@
   
     <servlet>
     <description></description>
-    <display-name>CityyServletCreate</display-name>
+    <display-name>CityServletCreate</display-name>
     <servlet-name>CityServletCreate</servlet-name>
     <servlet-class>city.web.servlet.CityServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CityServletCreate</servlet-name>
     <url-pattern>/CityServletCreate</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>IndustryServletCreate</display-name>
+    <servlet-name>IndustryServletCreate</servlet-name>
+    <servlet-class>industry.web.servlet.IndustryServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryServletCreate</servlet-name>
+    <url-pattern>/IndustryServletCreate</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -59,13 +70,24 @@
  
     <servlet>
     <description></description>
-    <display-name>CityyServletRead</display-name>
+    <display-name>CityServletRead</display-name>
     <servlet-name>CityServletRead</servlet-name>
     <servlet-class>city.web.servlet.CityServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CityServletRead</servlet-name>
     <url-pattern>/CityServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>IndustryServletRead</display-name>
+    <servlet-name>IndustryServletRead</servlet-name>
+    <servlet-class>industry.web.servlet.IndustryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryServletRead</servlet-name>
+    <url-pattern>/IndustryServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -92,13 +114,24 @@
   
     <servlet>
     <description></description>
-    <display-name>CityyServletUpdate</display-name>
+    <display-name>CityServletUpdate</display-name>
     <servlet-name>CityServletUpdate</servlet-name>
     <servlet-class>city.web.servlet.CityServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CityServletUpdate</servlet-name>
     <url-pattern>/CityServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>IndustryServletUpdate</display-name>
+    <servlet-name>IndustryServletUpdate</servlet-name>
+    <servlet-class>industry.web.servlet.IndustryServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryServletUpdate</servlet-name>
+    <url-pattern>/IndustryServletUpdate</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -125,13 +158,24 @@
   
     <servlet>
     <description></description>
-    <display-name>CityyServletDelete</display-name>
+    <display-name>CityServletDelete</display-name>
     <servlet-name>CityServletDelete</servlet-name>
     <servlet-class>city.web.servlet.CityServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CityServletDelete</servlet-name>
     <url-pattern>/CityServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>IndustryServletDelete</display-name>
+    <servlet-name>IndustryServletDelete</servlet-name>
+    <servlet-class>industry.web.servlet.IndustryServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndustryServletDelete</servlet-name>
+    <url-pattern>/IndustryServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -212,6 +256,17 @@
   <servlet-mapping>
     <servlet-name>FindCity</servlet-name>
     <url-pattern>/FindCity</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>FindIndustry</display-name>
+    <servlet-name>FindIndustry</servlet-name>
+    <servlet-class>industry.web.servlet.FindIndustry</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindIndustry</servlet-name>
+    <url-pattern>/FindIndustry</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import country.dao.CountryDao;
-import country.domain.City;
+import country.domain.Country;
 //import entity1.service.CountryService;
 
 
@@ -39,7 +39,7 @@ public class CountryServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		City country = null;
+		Country country = null;
 		CountryDao countryDao = new CountryDao();
 		try {
 			country = CountryDao.findById(Integer.parseInt(request.getParameter("id")));

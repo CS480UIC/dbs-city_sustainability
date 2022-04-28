@@ -1,4 +1,4 @@
-package company.web.servlet;
+package industry.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,21 +11,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import company.dao.CompanyDao;
-import company.domain.Company;
-//import entity1.service.Entity1Service;
+import industry.dao.IndustryDao;
+import industry.domain.Industry;
+//import entity1.service.IndustryService;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CompanyServletUpdate extends HttpServlet {
+public class IndustryServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CompanyServletUpdate() {
+    public IndustryServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,15 +41,15 @@ public class CompanyServletUpdate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+//
 		String method = request.getParameter("method");
-		CompanyDao companyDao = new CompanyDao();
-		Company newCompany = null;
+		IndustryDao industrydao = new IndustryDao();
+		Industry industry = null;
 		
 		if(method.equals("search"))
 		{
 			try {
-				newCompany = CompanyDao.findByCompanyID(Integer.parseInt(request.getParameter("id")));
+				industry = industrydao.findIndustryId(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -58,25 +58,25 @@ public class CompanyServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			Entity1Service entity1service = new Entity1Service();		
-			if(newCompany.getCompanyID()!=null){
+//			IndustryService industryService = new IndustryService();		
+			if(industry.getId()!=null){
 				System.out.println("11");
 
-						System.out.println(newCompany);
-						request.setAttribute("entity1", newCompany);
-						request.getRequestDispatcher("/jsps/company/company_update_output.jsp").forward(request, response);
+						//System.out.println(industry);
+						request.setAttribute("industry", industry);
+						request.getRequestDispatcher("/jsps/industry/industry_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
-				request.setAttribute("msg", "company not found");
-				request.getRequestDispatcher("/jsps/company/company_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Industry not found");
+				request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Company form = new Company();
+			Industry form = new Industry();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -85,19 +85,17 @@ public class CompanyServletUpdate extends HttpServlet {
 				info.add(values[0]);
 				System.out.println(name + ": " + Arrays.toString(values));
 			}
-
-			form.setIndustryID(Integer.parseInt(info.get(2)));
-//			System.out.println("2");
-
-			form.setCompanyName(info.get(3));		
-//			System.out.println("3");
+//			form.setPassword(info.get(2));
+//			form.setEmail(info.get(3));
+//			form.setUsername(request.getParameter("username"));
 			
-			form.setCompanyEmission(Float.parseFloat(info.get(4)));
-			
-			form.setCompanyID(Integer.parseInt(request.getParameter("id")));
+			form.setId(Integer.parseInt(info.get(1)));
+			form.setCountry_id(Integer.parseInt(info.get(2)));
+			form.setIndustry_type(info.get(3));
+			form.setIndustry_emission(Float.parseFloat(info.get(4)));	
 
 			try {
-				companyDao.update(form);
+				industrydao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -106,8 +104,8 @@ public class CompanyServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Industry Updated");
+			request.getRequestDispatcher("/jsps/industry/industry_read_output.jsp").forward(request, response);
 		}
 	}
 }

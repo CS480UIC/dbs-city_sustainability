@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Country</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,33 +21,34 @@
   </head>
   
   <body>
-  <h1>Update Company</h1>
+  <h1>Update Country</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	id    :<input type="text" name="id" value="${company.id }" disabled/>
+	id    		   :<input type="text" name="id" value="${company.id }" disabled/>
 	<br/>
-	
-	industry_id：<input type="text" name="industry_id" value="${company.industry_id }" disabled />
+	country_id     :<input type="text" name="country_id" value="${company.country_id }" disabled/>
 	<br/>
-	company_name：<input type="text" name="company_name" value="${company.company_name }" disabled/>
+	company_name	   ：<input type="text" name="company_name" value="${company.company_name }" disabled/>
 	<br/>
-	
 	company_emission：<input type="text" name="company_emission" value="${company.company_emission }" disabled/>
-	<br/>	
-</form>
+	<br/>
 
+</form>
 
 <h1>Update the values below</h1>
 <form action="<c:url value='/CompanyServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="update"/>
 	<input type="hidden" name="id" value="${company.id }"/>
-	industry_id：<input type="text" name="industry_id" value="${form.industry_id }" disabled />
-	<br/>
-	company_name：<input type="text" name="company_name" value="${form.company_name }" disabled/>
-	<br/>
 	
-	company_emission：<input type="text" name="company_emission" value="${form.company_emission }" disabled/>
-	<br/>	
+	country_id		：<input type="text" name="country_id" value="${form.country_id }"/>
+	<span style="color: red; font-weight: 900">${errors.country_id }</span>
+	<br/>
+	company_name	：<input type="text" name="company_name" value="${form.company_name }"/>
+	<span style="color: red; font-weight: 900">${errors.company_name }</span>
+	<br/>
+	company_emission	：<input type="text" name="company_emission" value="${form.company_emission }"/>
+	<span style="color: red; font-weight: 900">${errors.company_emission }</span>
+	<br/>
 	<input type="submit" value="Update Company"/>
 </form>
 

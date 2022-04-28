@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import country.dao.CountryDao;
-import country.domain.City;
+import country.domain.Country;
 import user.domain.User;
 
 /**
@@ -28,11 +28,11 @@ public class CountryService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(City form) throws CountryException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(Country form) throws CountryException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the primary key of Country
 		System.out.println("form.getId CONTENTS: " + form);
-		City country = CountryDao.findById(form.getId());
+		Country country = CountryDao.findById(form.getId());
 		if(country.getId()!=null && country.getId().equals(form.getId())) throw new CountryException("This country has been registered!");
 		countryDao.add(form);
 	}

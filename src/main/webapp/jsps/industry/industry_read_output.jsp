@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Industry</title>
+    <title>Read Industry Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,19 @@
   </head>
   
   <body>
-  <h1>Delete Industry</h1>
-<form action="<c:url value='/IndustryServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete Industry: <input type="text" name="id" value="${form.id}"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+  <h1>Read Industry Output</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form>
+	ID    			  :<input type="text" name="id" value="${industry.id }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Industry"/>
+	Country ID    	  :<input type="text" name="country_id" value="${industry.country_id }" disabled/>
+	<br/>
+	industry_name	  ：<input type="text" name="industry_type" value="${industry.industry_type }" disabled/>
+	<br/>
+	industry_emission ：<input type="text" name="industry_emission" value="${industry.industry_emission }" disabled/>
+	<br/>
 </form>
-  </body>
+
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+</body>
 </html>

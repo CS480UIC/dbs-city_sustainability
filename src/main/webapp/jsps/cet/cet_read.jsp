@@ -23,7 +23,7 @@
   <body>
   <h1>Read Carbon Emissions Target Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/IndustryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	Read cet_id:  <input type="text" name="cet_id" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

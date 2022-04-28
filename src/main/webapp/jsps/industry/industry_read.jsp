@@ -23,10 +23,10 @@
   <body>
   <h1>Read Industry</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/IndustryServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	industry_id: <input type="text" name="industry_id" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	id: <input type="text" name="id" value="${form.id}"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
