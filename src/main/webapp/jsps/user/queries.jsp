@@ -27,6 +27,7 @@
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp; 
     <br/>
     <a href="<c:url value='/FindCountry'/>" target="body">Please list all the country in the table</a>&nbsp;&nbsp;
-    
+    <br/>
+    <a href="<c:url value='/FindCity'/>" target="body">Please list all the city in the table</a>&nbsp;&nbsp;
   </body>
 </html>

@@ -1,4 +1,4 @@
-package country.web.servlet;
+package city.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import country.domain.City;
-import country.service.CountryException;
-import country.service.CountryService;
+import city.domain.City;
+import city.service.CityException;
+import city.service.CityService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CountryServletCreate extends HttpServlet {
+public class CityServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CountryServletCreate() {
+    public CityServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,7 +42,7 @@ public class CountryServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CountryService entity1service = new CountryService();
+		CityService entity1service = new CityService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		City form = new City();
 		List<String> info = new ArrayList<String>();
@@ -61,19 +61,22 @@ public class CountryServletCreate extends HttpServlet {
 //		System.out.println("INFO CONTENTS: " + info);
 
 		form.setId(Integer.parseInt(info.get(0)));
-
-		form.setCountry_name(info.get(1));
-
-		form.setCountry_population(Float.parseFloat(info.get(2)));		
 		
+		form.setCountry_id(Integer.parseInt(info.get(1)));
+		
+		form.setCity_name(info.get(2));
+
+		form.setCity_population(Float.parseFloat(info.get(3)));		
+		
+		form.setCity_density(Float.parseFloat(info.get(4)));	
 		
 		try {
-			System.out.println("3");
+			//System.out.println("3");
 			//System.out.println("form CONTENTS: " + form);
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | CountryException e) {
+		} catch (ClassNotFoundException | CityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

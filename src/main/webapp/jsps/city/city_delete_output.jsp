@@ -22,12 +22,22 @@
   
   <body>
   <h1>Delete City</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/CityServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete id:<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="id" value="${city.id }"/>
+	id			   :<input type="text" name="id" value="${city.id }" disabled/>
+	<br/>
+	country_id	   :<input type="text" name="country_id" value="${city.country_id }" disabled/>
+	<br/>
+	city_name	   ：<input type="text" name="city_name" value="${city.city_name }" disabled/>
+	<br/>
+	city_population：<input type="text" name="city_population" value="${city.city_population }" disabled/>
+	<br/>
+	city_density   ：<input type="text" name="city_density" value="${city.city_density }" disabled/>
 	<br/>
 	<input type="submit" value="Delete City"/>
 </form>
-  </body>
+
+</body>
 </html>

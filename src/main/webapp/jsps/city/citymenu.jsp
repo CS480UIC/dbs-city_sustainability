@@ -7,7 +7,7 @@
   <head>
     <base href="">
     
-    <title>body</title>
+    <title>City Menu</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">

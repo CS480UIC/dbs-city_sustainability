@@ -1,4 +1,4 @@
-package country.web.servlet;
+package city.web.servlet;
 
 import java.io.IOException;
 //import java.util.ArrayList;
@@ -14,21 +14,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import country.dao.CountryDao;
-import country.domain.City;
-//import country.service.CountryException;
-//import country.service.CountryService;
+import city.dao.CityDao;
+import city.domain.City;
+//import city.service.CityException;
+//import city.service.CityService;
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CountryServletDelete extends HttpServlet {
+public class CityServletDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CountryServletDelete() {
+    public CityServletDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,13 +45,13 @@ public class CountryServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		CountryDao countrydao = new CountryDao();
-		City country = null;
+		CityDao citydao = new CityDao();
+		City city = null;
 		if(method.equals("search"))
 		{
 			try {
-//				countrydao to CountryDao
-				country = CountryDao.findById(Integer.parseInt(request.getParameter("id")));
+//				citydao to CityDao
+				city = CityDao.findCityId(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -60,22 +60,22 @@ public class CountryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			CountryService countryservice = new CountryService();		
-			if(country.getId()!=null){
-						System.out.println(country);
-						request.setAttribute("country", country);
-						request.getRequestDispatcher("/jsps/country/country_delete_output.jsp").forward(request, response);
+//			CityService cityservice = new CityService();		
+			if(city.getId()!=null){
+						System.out.println(city);
+						request.setAttribute("city", city);
+						request.getRequestDispatcher("/jsps/city/city_delete_output.jsp").forward(request, response);
 					
 				}
 				else{
-				request.setAttribute("msg", "Country not found");
-				request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "City not found");
+				request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				countrydao.delete(request.getParameter("id"));
+				citydao.delete(request.getParameter("id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -84,7 +84,7 @@ public class CountryServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 		}
 	}
 }

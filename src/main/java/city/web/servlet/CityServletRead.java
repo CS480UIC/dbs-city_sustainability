@@ -1,4 +1,4 @@
-package country.web.servlet;
+package city.web.servlet;
 
 import java.io.IOException;
 
@@ -8,22 +8,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import country.dao.CountryDao;
-import country.domain.City;
-//import entity1.service.CountryService;
+import city.dao.CityDao;
+import city.domain.City;
+//import entity1.service.CityService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CountryServletRead extends HttpServlet {
+public class CityServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CountryServletRead() {
+    public CityServletRead() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,10 +39,10 @@ public class CountryServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		City country = null;
-		CountryDao countryDao = new CountryDao();
+		City city = null;
+		CityDao cityDao = new CityDao();
 		try {
-			country = CountryDao.findById(Integer.parseInt(request.getParameter("id")));
+			city = CityDao.findCityId(Integer.parseInt(request.getParameter("id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -51,15 +51,15 @@ public class CountryServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(country.getId()!=null){
-					//System.out.println(country);
-					request.setAttribute("country", country);
-					request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+		if(city.getId()!=null){
+					//System.out.println(city);
+					request.setAttribute("city", city);
+					request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 				
 			}
 			else{
 			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 		}
 	}
 }

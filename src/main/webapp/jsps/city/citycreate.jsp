@@ -23,20 +23,20 @@
   <body>
   <h1>City Create</h1>
 <form action="<c:url value='/CityServletCreate'/>" method="post">
-	city_id:<input type="text" name="city_id" value="${form.city_id }"/>
-	<span style="color: red; font-weight: 900">${errors.city_id }</span>
+	id			:<input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	country_id：<input type="text" name="country_id" value="${form.country_id }"/>
+	country_id	：<input type="text" name="country_id" value="${form.country_id }"/>
 	<span style="color: red; font-weight: 900">${errors.country_id }</span>
 	<br/>
-	city_name：<input type="text" name="city_name" value="${form.city_name }"/>
+	city_name	：<input type="text" name="city_name" value="${form.city_name }"/>
 	<span style="color: red; font-weight: 900">${errors.city_name }</span>
 	<br/>
 	city_population:<input type="text" name="city_population" value="${form.city_population }"/>
 	<span style="color: red; font-weight: 900">${errors.city_population }</span>
 	<br/>
-	population_density:<input type="text" name="population_density" value="${form.population_density }"/>
-	<span style="color: red; font-weight: 900">${errors.population_density }</span>
+	city_density:<input type="text" name="city_density" value="${form.city_density }"/>
+	<span style="color: red; font-weight: 900">${errors.city_density }</span>
 	<br/>
 	<input type="submit" value="Create City"/>
 </form>

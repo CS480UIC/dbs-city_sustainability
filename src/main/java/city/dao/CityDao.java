@@ -1,4 +1,4 @@
-package country.dao;
+package city.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,22 +11,22 @@ import java.util.List;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import country.domain.City;
-//import user.domain.User;
+import city.domain.City;
+//import user.domain.City;
 
 /**
  * DDL functions performed in database
  */
-public class CountryDao {
+public class CityDao {
 
-	public static City findById(Integer id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		City country = new City();
+	public static City findCityId(Integer id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		City city = new City();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
-		    String sql = "select * from country where id = ?";
+		    String sql = "select * from city where id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    System.out.println("ID CONTENT: " + id);
+		    //System.out.println("ID CONTENT: " + id);
 		    preparestatement.setInt(1,id);
 		    ResultSet resultSet = preparestatement.executeQuery();
 		    System.out.println("RESULTSET CONTENTS: " + resultSet);
@@ -34,16 +34,18 @@ public class CountryDao {
 		    while(resultSet.next()){
 		    	Integer id_ = Integer.parseInt(resultSet.getString("id"));
 		    	if(id_ == id) {
-		    		country.setId(id_);
-		    		country.setCountry_name(resultSet.getString("country_name"));
-		    		country.setCountry_population(Float.parseFloat(resultSet.getString("country_population")));
+		    		city.setId(id_);
+		    		city.setCountry_id(Integer.parseInt(resultSet.getString("country_id")));
+		    		city.setCity_name(resultSet.getString("city_name"));
+		    		city.setCity_population(Float.parseFloat(resultSet.getString("city_population")));
+		    		city.setCity_density(Float.parseFloat(resultSet.getString("city_density")));
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return country;
+		return city;
 	}	
 	
 	/**
@@ -60,11 +62,13 @@ public class CountryDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
 			
-			String sql = "insert into country (id, country_name, country_population) values(?,?,?)";
+			String sql = "insert into city (id, country_id, city_name, city_population, city_density) values(?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getId());
-		    preparestatement.setString(2,form.getCountry_name());
-		    preparestatement.setFloat(3,form.getCountry_population());
+		    preparestatement.setInt(2,form.getCountry_id());
+		    preparestatement.setString(3,form.getCity_name());
+		    preparestatement.setFloat(4,form.getCity_population());
+		    preparestatement.setFloat(5,form.getCity_density());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -80,12 +84,13 @@ public class CountryDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
 			
-			String sql = "UPDATE country SET country_name = ?, country_population = ? where id = ?;";
+			String sql = "UPDATE city SET city_name = ?, city_population = ?, city_density = ? where id = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getCountry_name());
-			preparestatement.setFloat(2,form.getCountry_population());
-		    preparestatement.setInt(3,form.getId());
+		    preparestatement.setString(1,form.getCity_name());
+			preparestatement.setFloat(2,form.getCity_population());
+			preparestatement.setFloat(3,form.getCity_density());
+		    preparestatement.setInt(4,form.getId());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -93,21 +98,22 @@ public class CountryDao {
 		}
 	}
 
-	
-	public List<Object> findcountry() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+	public List<Object> findcity() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
-			String sql = "select * from simple_country";
+			String sql = "select * from simple_city";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				City country = new City();
-				country.setId(Integer.parseInt(resultSet.getString("id")));
-	    		country.setCountry_name(resultSet.getString("country_name"));
-	    		country.setCountry_population(Float.parseFloat(resultSet.getString("country_population")));
-	    		list.add(country);
+				City city = new City();
+				city.setId(Integer.parseInt(resultSet.getString("id")));
+				city.setCountry_id(Integer.parseInt(resultSet.getString("country_id")));
+	    		city.setCity_name(resultSet.getString("city_name"));
+	    		city.setCity_population(Float.parseFloat(resultSet.getString("city_population")));
+	    		city.setCity_density(Float.parseFloat(resultSet.getString("city_density")));
+	    		list.add(city);
 			 }
 			connect.close();
 		} catch(SQLException e) {
@@ -122,7 +128,7 @@ public class CountryDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
 			
-			String sql = "delete from country where id = ?";
+			String sql = "delete from city where id = ?";
 //			System.out.println(id);
 //			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 

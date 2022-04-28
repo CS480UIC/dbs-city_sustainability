@@ -24,6 +24,17 @@
     <url-pattern>/CountryServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>CityyServletCreate</display-name>
+    <servlet-name>CityServletCreate</servlet-name>
+    <servlet-class>city.web.servlet.CityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityServletCreate</servlet-name>
+    <url-pattern>/CityServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>CompanyServletRead</display-name>
@@ -44,6 +55,17 @@
   <servlet-mapping>
     <servlet-name>CountryServletRead</servlet-name>
     <url-pattern>/CountryServletRead</url-pattern>
+  </servlet-mapping>
+ 
+    <servlet>
+    <description></description>
+    <display-name>CityyServletRead</display-name>
+    <servlet-name>CityServletRead</servlet-name>
+    <servlet-class>city.web.servlet.CityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityServletRead</servlet-name>
+    <url-pattern>/CityServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -70,6 +92,17 @@
   
     <servlet>
     <description></description>
+    <display-name>CityyServletUpdate</display-name>
+    <servlet-name>CityServletUpdate</servlet-name>
+    <servlet-class>city.web.servlet.CityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityServletUpdate</servlet-name>
+    <url-pattern>/CityServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
     <display-name>CompanyServletDelete</display-name>
     <servlet-name>CompanyServletDelete</servlet-name>
     <servlet-class>company.web.servlet.CompanyServletDelete</servlet-class>
@@ -88,6 +121,17 @@
   <servlet-mapping>
     <servlet-name>CountryServletDelete</servlet-name>
     <url-pattern>/CountryServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>CityyServletDelete</display-name>
+    <servlet-name>CityServletDelete</servlet-name>
+    <servlet-class>city.web.servlet.CityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CityServletDelete</servlet-name>
+    <url-pattern>/CityServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -157,6 +201,17 @@
   <servlet-mapping>
     <servlet-name>FindCountry</servlet-name>
     <url-pattern>/FindCountry</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>FindCity</display-name>
+    <servlet-name>FindCity</servlet-name>
+    <servlet-class>city.web.servlet.FindCity</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindCity</servlet-name>
+    <url-pattern>/FindCity</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

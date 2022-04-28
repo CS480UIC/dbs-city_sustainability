@@ -1,4 +1,4 @@
-package country.web.servlet;
+package city.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,21 +11,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import country.dao.CountryDao;
-import country.domain.City;
-//import entity1.service.CountryService;
+import city.dao.CityDao;
+import city.domain.City;
+//import entity1.service.CityService;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class CountryServletUpdate extends HttpServlet {
+public class CityServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CountryServletUpdate() {
+    public CityServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,13 +43,13 @@ public class CountryServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //
 		String method = request.getParameter("method");
-		CountryDao countrydao = new CountryDao();
-		City country = null;
+		CityDao citydao = new CityDao();
+		City city = null;
 		
 		if(method.equals("search"))
 		{
 			try {
-				country = countrydao.findById(Integer.parseInt(request.getParameter("id")));
+				city = citydao.findCityId(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -58,19 +58,19 @@ public class CountryServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			CountryService countryService = new CountryService();		
-			if(country.getCountry_name()!=null){
+//			CityService cityService = new CityService();		
+			if(city.getCity_name()!=null){
 				System.out.println("11");
 
-						//System.out.println(country);
-						request.setAttribute("country", country);
-						request.getRequestDispatcher("/jsps/country/country_update_output.jsp").forward(request, response);
+						//System.out.println(city);
+						request.setAttribute("city", city);
+						request.getRequestDispatcher("/jsps/city/city_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
-				request.setAttribute("msg", "Country not found");
-				request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "City not found");
+				request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -90,11 +90,13 @@ public class CountryServletUpdate extends HttpServlet {
 //			form.setUsername(request.getParameter("username"));
 			
 			form.setId(Integer.parseInt(info.get(1)));
-			form.setCountry_name(info.get(2));
-			form.setCountry_population(Float.parseFloat(info.get(3)));	
+			form.setCountry_id(Integer.parseInt(info.get(1)));
+			form.setCity_name(info.get(2));
+			form.setCity_population(Float.parseFloat(info.get(3)));
+			form.setCity_density(Float.parseFloat(info.get(4)));	
 
 			try {
-				countrydao.update(form);
+				citydao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -103,8 +105,8 @@ public class CountryServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Country Updated");
-			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "City Updated");
+			request.getRequestDispatcher("/jsps/city/city_read_output.jsp").forward(request, response);
 		}
 	}
 }
