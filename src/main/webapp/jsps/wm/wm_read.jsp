@@ -23,10 +23,10 @@
   <body>
   <h1>Read Waste Management Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/WMServletRead'/>" method="post">
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read wm_id:  <input type="text" name="wm_id" value="${form.wm_id }"/>
-	<span style="color: red; font-weight: 900">${errors.wm_id }</span>
+	Read wm_id:  <input type="text" name="wm_id" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/><br/>
 <!-- <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
