@@ -48,7 +48,7 @@ public class findAll extends HttpServlet {
 		}
 		
 		
-		request.getRequestDispatcher("/jsps/Queryresult/list.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/Queryresult/q1_list_users.jsp").forward(request, response);
 	}
 
 }
