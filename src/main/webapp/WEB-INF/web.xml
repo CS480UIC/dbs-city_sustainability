@@ -37,6 +37,17 @@
   
     <servlet>
     <description></description>
+    <display-name>CountryServletRead</display-name>
+    <servlet-name>CountryServletRead</servlet-name>
+    <servlet-class>country.web.servlet.CountryServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountryServletRead</servlet-name>
+    <url-pattern>/CountryServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
     <display-name>CompanyServletUpdate</display-name>
     <servlet-name>CompanyServletUpdate</servlet-name>
     <servlet-class>company.web.servlet.CompanyServletUpdate</servlet-class>

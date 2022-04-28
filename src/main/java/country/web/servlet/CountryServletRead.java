@@ -39,27 +39,28 @@ public class CountryServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		Country entity1 = null;
-//		try {
-//			entity1 = CountryDao.findById(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//				
-//			}
-//			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		Country country = null;
+		CountryDao countryDao = new CountryDao();
+		try {
+			country = CountryDao.findById(Integer.parseInt(request.getParameter("id")));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(country.getId()!=null){
+					//System.out.println(country);
+					request.setAttribute("country", country);
+					request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+				
+			}
+			else{
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/country/country_read_output.jsp").forward(request, response);
+		}
 	}
 }
 
