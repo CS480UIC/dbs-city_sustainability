@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Country:</title>
+    <title>Delete Country</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,19 @@
   
   <body>
   <h1>Delete Country</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/CountryServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete id:  <input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="id" value="${country.id }"/>
+	id			      :<input type="text" name="id" value="${country.id }" disabled/>
+	<br/>
+	
+	country_name	  ：<input type="text" name="country_name" value="${country.country_name }" disabled/>
+	<br/>
+	country_population：<input type="text" name="country_population" value="${country.country_population }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Country"/>
 </form>
-  </body>
+
+</body>
 </html>

@@ -99,15 +99,15 @@ public class CountryDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
-			String sql = "select * from country";
+			String sql = "select * from simple_country";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
-				User user = new User();
-				user.setUsername(resultSet.getString("username"));
-	    		user.setPassword(resultSet.getString("password"));
-	    		user.setEmail(resultSet.getString("email"));
-	    		list.add(user);
+				Country country = new Country();
+				country.setId(Integer.parseInt(resultSet.getString("id")));
+	    		country.setCountry_name(resultSet.getString("country_name"));
+	    		country.setCountry_population(Float.parseFloat(resultSet.getString("country_population")));
+	    		list.add(country);
 			 }
 			connect.close();
 		} catch(SQLException e) {
@@ -116,23 +116,21 @@ public class CountryDao {
 		return list;
 	}
 	
-	/*
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/city_sustainability", "city_sustainability", "Cps42973351");
 			
-			String sql = "delete from entity1 where username = ?";
-			System.out.println(username);
-			System.out.println("Delete Executed");
+			String sql = "delete from country where id = ?";
+//			System.out.println(id);
+//			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1, Integer.parseInt(id));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
 }

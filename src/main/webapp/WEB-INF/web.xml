@@ -147,6 +147,18 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>FindCountry</display-name>
+    <servlet-name>FindCountry</servlet-name>
+    <servlet-class>country.web.servlet.FindCountry</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindCountry</servlet-name>
+    <url-pattern>/FindCountry</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
