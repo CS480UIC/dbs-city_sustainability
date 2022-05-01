@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Energy Management</title>
+    <title>Read Energy Management</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete Energy Management</h1>
-<form action="<c:url value='/EnergyManagementServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete em_id:<input type="text" name="em_id" value="${form.em_id }"/>
+  <h1>Read</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form action="<c:url value='/Energy_managementServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	Read em_id:<input type="text" name="em_id" value="${form.em_id }"/>
 	<span style="color: red; font-weight: 900">${errors.em_id }</span>
 	<br/>
-	<input type="submit" value="Delete Energy Management"/>
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
+	<br/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/> --%>
+	<input type="submit" value="Read Energy Management"/>
 </form>
   </body>
 </html>

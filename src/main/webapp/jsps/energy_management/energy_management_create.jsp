@@ -22,12 +22,12 @@
   
   <body>
   <h1>Energy Management Create</h1>
-<form action="<c:url value='/EnergyManagementServletCreate'/>" method="post">
+<form action="<c:url value='/Energy_managementServletCreate'/>" method="post">
 	em_id:<input type="text" name="em_id" value="${form.em_id }"/>
 	<span style="color: red; font-weight: 900">${errors.em_id }</span>
 	<br/>
-	country_id：<input type="text" name="country_id" value="${form.country_id }"/>
-	<span style="color: red; font-weight: 900">${errors.country_id }</span>
+	em_city_id：<input type="text" name="em_city_id" value="${form.em_city_id }"/>
+	<span style="color: red; font-weight: 900">${errors.em_city_id }</span>
 	<br/>
 	energy_production：<input type="text" name="energy_production" value="${form.energy_production }"/>
 	<span style="color: red; font-weight: 900">${errors.energy_production }</span>
@@ -35,10 +35,10 @@
 	energy_consumption:<input type="text" name="energy_consumption" value="${form.energy_consumption }"/>
 	<span style="color: red; font-weight: 900">${errors.energy_consumption }</span>
 	<br/>
-	energy_emission:<input type="text" name="energy_emission" value="${form.energy_emission }"/>
-	<span style="color: red; font-weight: 900">${errors.energy_emission }</span>
+	energy_management:<input type="text" name="energy_management" value="${form.energy_management }"/>
+	<span style="color: red; font-weight: 900">${errors.energy_management }</span>
 	<br/>
-	<input type="submit" value="Create City"/>
+	<input type="submit" value="Create Energy Management"/>
 </form>
   </body>
 </html>

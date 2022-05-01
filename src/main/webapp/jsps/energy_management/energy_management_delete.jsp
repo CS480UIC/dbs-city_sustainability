@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Energy Management</title>
+    <title>Delete Energy Management</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='/EnergyManagementServletUpdate'/>" method="post">
+  <h1>Delete Energy Management</h1>
+<form action="<c:url value='/Energy_managementServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update em_id:<input type="text" name="em_id" value="${form.em_id }"/>
+	Delete em_id:<input type="text" name="em_id" value="${form.em_id }"/>
 	<span style="color: red; font-weight: 900">${errors.em_id }</span>
 	<br/>
-	<input type="submit" value="Update Energy Management"/>
+	<input type="submit" value="Delete Energy Management"/>
 </form>
   </body>
 </html>

@@ -60,24 +60,24 @@
   
     <servlet>
     <description></description>
-    <display-name>WMServletCreate</display-name>
-    <servlet-name>WMServletCreate</servlet-name>
-    <servlet-class>wm.web.servlet.WMServletCreate</servlet-class>
+    <display-name>Waste_managementServletCreate</display-name>
+    <servlet-name>Waste_managementServletCreate</servlet-name>
+    <servlet-class>.web.servlet.Waste_managementServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>WMServletCreate</servlet-name>
-    <url-pattern>/WMServletCreate</url-pattern>
+    <servlet-name>Waste_managementServletCreate</servlet-name>
+    <url-pattern>/Waste_managementServletCreate</url-pattern>
   </servlet-mapping>
  
     <servlet>
     <description></description>
-    <display-name>EMServletCreate</display-name>
-    <servlet-name>EMServletCreate</servlet-name>
-    <servlet-class>em.web.servlet.EMServletCreate</servlet-class>
+    <display-name>Energy_managementServletCreate</display-name>
+    <servlet-name>Energy_managementServletCreate</servlet-name>
+    <servlet-class>energy_management.web.servlet.Energy_managementServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EMServletCreate</servlet-name>
-    <url-pattern>/EMServletCreate</url-pattern>
+    <servlet-name>Energy_managementServletCreate</servlet-name>
+    <url-pattern>/Energy_managementServletCreate</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -126,24 +126,24 @@
   
     <servlet>
     <description></description>
-    <display-name>WMServletRead</display-name>
-    <servlet-name>WMServletRead</servlet-name>
-    <servlet-class>wm.web.servlet.WMServletRead</servlet-class>
+    <display-name>Waste_managementServletRead</display-name>
+    <servlet-name>Waste_managementServletRead</servlet-name>
+    <servlet-class>.web.servlet.Waste_managementServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>WMServletRead</servlet-name>
-    <url-pattern>/WMServletRead</url-pattern>
+    <servlet-name>Waste_managementServletRead</servlet-name>
+    <url-pattern>/Waste_managementServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
     <description></description>
-    <display-name>EMServletRead</display-name>
-    <servlet-name>EMServletRead</servlet-name>
-    <servlet-class>em.web.servlet.EMServletRead</servlet-class>
+    <display-name>Energy_managementServletRead</display-name>
+    <servlet-name>Energy_managementServletRead</servlet-name>
+    <servlet-class>energy_management.web.servlet.Energy_managementServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EMServletRead</servlet-name>
-    <url-pattern>/EMServletRead</url-pattern>
+    <servlet-name>Energy_managementServletRead</servlet-name>
+    <url-pattern>/Energy_managementServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -192,24 +192,24 @@
   
     <servlet>
     <description></description>
-    <display-name>WMServletUpdate</display-name>
-    <servlet-name>WMServletUpdate</servlet-name>
-    <servlet-class>wm.web.servlet.WMServletUpdate</servlet-class>
+    <display-name>Waste_managementServletUpdate</display-name>
+    <servlet-name>Waste_managementServletUpdate</servlet-name>
+    <servlet-class>.web.servlet.Waste_managementServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>WMServletUpdate</servlet-name>
-    <url-pattern>/WMServletUpdate</url-pattern>
+    <servlet-name>Waste_managementServletUpdate</servlet-name>
+    <url-pattern>/Waste_managementServletUpdate</url-pattern>
   </servlet-mapping>
   
     <servlet>
     <description></description>
-    <display-name>EMServletUpdate</display-name>
-    <servlet-name>EMServletUpdate</servlet-name>
-    <servlet-class>em.web.servlet.EMServletUpdate</servlet-class>
+    <display-name>Energy_managementServletUpdate</display-name>
+    <servlet-name>Energy_managementServletUpdate</servlet-name>
+    <servlet-class>energy_management.web.servlet.Energy_managementServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EMServletUpdate</servlet-name>
-    <url-pattern>/EMServletUpdate</url-pattern>
+    <servlet-name>Energy_managementServletUpdate</servlet-name>
+    <url-pattern>/Energy_managementServletUpdate</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -258,24 +258,24 @@
   
     <servlet>
     <description></description>
-    <display-name>WMServletDelete</display-name>
-    <servlet-name>WMServletDelete</servlet-name>
-    <servlet-class>wm.web.servlet.WMServletDelete</servlet-class>
+    <display-name>Waste_managementServletDelete</display-name>
+    <servlet-name>Waste_managementServletDelete</servlet-name>
+    <servlet-class>.web.servlet.Waste_managementServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>WMServletDelete</servlet-name>
-    <url-pattern>/WMServletDelete</url-pattern>
+    <servlet-name>Waste_managementServletDelete</servlet-name>
+    <url-pattern>/Waste_managementServletDelete</url-pattern>
   </servlet-mapping>
 
     <servlet>
     <description></description>
-    <display-name>EMServletDelete</display-name>
-    <servlet-name>EMServletDelete</servlet-name>
-    <servlet-class>em.web.servlet.EMServletDelete</servlet-class>
+    <display-name>Energy_managementServletDelete</display-name>
+    <servlet-name>Energy_managementServletDelete</servlet-name>
+    <servlet-class>energy_management.web.servlet.Energy_managementServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EMServletDelete</servlet-name>
-    <url-pattern>/EMServletDelete</url-pattern>
+    <servlet-name>Energy_managementServletDelete</servlet-name>
+    <url-pattern>/Energy_managementServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -382,24 +382,24 @@
 
     <servlet>
     <description></description>
-    <display-name>FindWM</display-name>
-    <servlet-name>FindWM</servlet-name>
-    <servlet-class>wm.web.servlet.FindWM</servlet-class>
+    <display-name>FindWaste_management</display-name>
+    <servlet-name>FindWaste_management</servlet-name>
+    <servlet-class>.web.servlet.FindWaste_management</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>FindWM</servlet-name>
-    <url-pattern>/FindWM</url-pattern>
+    <servlet-name>FindWaste_management</servlet-name>
+    <url-pattern>/FindWaste_management</url-pattern>
   </servlet-mapping>
 
     <servlet>
     <description></description>
-    <display-name>FindEM</display-name>
-    <servlet-name>FindEM</servlet-name>
-    <servlet-class>em.web.servlet.FindEM</servlet-class>
+    <display-name>FindEnergy_management</display-name>
+    <servlet-name>FindEnergy_management</servlet-name>
+    <servlet-class>energy_management.web.servlet.FindEnergy_management</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>FindEM</servlet-name>
-    <url-pattern>/FindEM</url-pattern>
+    <servlet-name>FindEnergy_management</servlet-name>
+    <url-pattern>/FindEnergy_management</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for EnergyManagement: </h1>
+    <h1>CRUD operations for Energy Management: </h1>
     <br>
-	<a href="<c:url value='/jsps/energy_management/energy_managementcreate.jsp'/>" target="_parent">Create Energy Management</a> |&nbsp; 
-	<a href="<c:url value='/jsps/energy_management/energy_managementread.jsp'/>" target="_parent">Read Energy Management</a> |&nbsp;
-	<a href="<c:url value='/jsps/energy_management/energy_managementupdate.jsp'/>" target="_parent">Update Energy Management</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/energy_management/energy_managementdelete.jsp'/>" target="_parent">Delete Energy Management</a>	
+	<a href="<c:url value='/jsps/energy_management/energy_management_create.jsp'/>" target="_parent">Create Energy Management</a> |&nbsp; 
+	<a href="<c:url value='/jsps/energy_management/energy_management_read.jsp'/>" target="_parent">Read Energy Management</a> |&nbsp;
+	<a href="<c:url value='/jsps/energy_management/energy_management_update.jsp'/>" target="_parent">Update Energy Management</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/energy_management/energy_management_delete.jsp'/>" target="_parent">Delete Energy Management</a>	
 	    
   </body>
 </html>
