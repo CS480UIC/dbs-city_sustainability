@@ -25,8 +25,8 @@
 	HAVING SUM(city_population) > 10000000;
 
 	CREATE VIEW string_industry AS
-	SELECT CONCAT(industry_type, ':', industry_emissions) FROM industry
-	WHERE industry_emissions > 500;
+	SELECT CONCAT(industry_type, ':', industry_emission) FROM industry
+	WHERE industry_emission > 500;
 
 	CREATE VIEW date_time_cet AS
 	SELECT YEAR(target_year) FROM carbon_emission_target
