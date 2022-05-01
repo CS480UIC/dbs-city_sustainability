@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Update Country</h1>
+  <h1>Update Company</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	id    		   :<input type="text" name="id" value="${company.id }" disabled/>
 	<br/>
-	country_id     :<input type="text" name="country_id" value="${company.country_id }" disabled/>
+	industry_id     :<input type="text" name="industry_id" value="${company.industry_id }" disabled/>
 	<br/>
 	company_name	   ：<input type="text" name="company_name" value="${company.company_name }" disabled/>
 	<br/>
@@ -40,8 +40,8 @@
 	<input type="hidden" name="method" value="update"/>
 	<input type="hidden" name="id" value="${company.id }"/>
 	
-	country_id		：<input type="text" name="country_id" value="${form.country_id }"/>
-	<span style="color: red; font-weight: 900">${errors.country_id }</span>
+	industry_id		：<input type="text" name="industry_id" value="${form.industry_id }"/>
+	<span style="color: red; font-weight: 900">${errors.industry_id }</span>
 	<br/>
 	company_name	：<input type="text" name="company_name" value="${form.company_name }"/>
 	<span style="color: red; font-weight: 900">${errors.company_name }</span>

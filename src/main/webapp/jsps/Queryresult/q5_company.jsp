@@ -12,14 +12,14 @@
 	<table border="1" width="70%" align="center">
 	<tr>
 		<th>Company ID</th>
-		<th>Country ID</th>
+		<th>Industry ID</th>
 		<th>Company Name</th>
 		<th>Industry Emission</th>
 	</tr>
 <c:forEach items="${Company List}" var="company">
 	<tr>
 		<td>${company.id}</td>
-		<td>${company.country_id}</td>
+		<td>${company.industry_id}</td>
 		<td>${company.company_name}</td>
 		<td>${company.company_emission}</td>
 	</tr>

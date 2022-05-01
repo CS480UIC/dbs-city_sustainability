@@ -26,7 +26,7 @@
 <form>
 	id    		   :<input type="text" name="id" value="${company.id }" disabled/>
 	<br/>
-	country_id     :<input type="text" name="country_id" value="${company.country_id }" disabled/>
+	industry_id     :<input type="text" name="industry_id" value="${company.industry_id }" disabled/>
 	<br/>
 	company_name	：<input type="text" name="company_name" value="${company.company_name }" disabled/>
 	<br/>

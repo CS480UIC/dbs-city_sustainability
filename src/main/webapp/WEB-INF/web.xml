@@ -58,6 +58,28 @@
     <url-pattern>/IndustryServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>WMServletCreate</display-name>
+    <servlet-name>WMServletCreate</servlet-name>
+    <servlet-class>wm.web.servlet.WMServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WMServletCreate</servlet-name>
+    <url-pattern>/WMServletCreate</url-pattern>
+  </servlet-mapping>
+ 
+    <servlet>
+    <description></description>
+    <display-name>EMServletCreate</display-name>
+    <servlet-name>EMServletCreate</servlet-name>
+    <servlet-class>em.web.servlet.EMServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EMServletCreate</servlet-name>
+    <url-pattern>/EMServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>CompanyServletRead</display-name>
@@ -104,6 +126,28 @@
   
     <servlet>
     <description></description>
+    <display-name>WMServletRead</display-name>
+    <servlet-name>WMServletRead</servlet-name>
+    <servlet-class>wm.web.servlet.WMServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WMServletRead</servlet-name>
+    <url-pattern>/WMServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>EMServletRead</display-name>
+    <servlet-name>EMServletRead</servlet-name>
+    <servlet-class>em.web.servlet.EMServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EMServletRead</servlet-name>
+    <url-pattern>/EMServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
     <display-name>CompanyServletUpdate</display-name>
     <servlet-name>CompanyServletUpdate</servlet-name>
     <servlet-class>company.web.servlet.CompanyServletUpdate</servlet-class>
@@ -134,7 +178,7 @@
     <servlet-name>CityServletUpdate</servlet-name>
     <url-pattern>/CityServletUpdate</url-pattern>
   </servlet-mapping>
-  
+
   <servlet>
     <description></description>
     <display-name>IndustryServletUpdate</display-name>
@@ -144,6 +188,28 @@
   <servlet-mapping>
     <servlet-name>IndustryServletUpdate</servlet-name>
     <url-pattern>/IndustryServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WMServletUpdate</display-name>
+    <servlet-name>WMServletUpdate</servlet-name>
+    <servlet-class>wm.web.servlet.WMServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WMServletUpdate</servlet-name>
+    <url-pattern>/WMServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>EMServletUpdate</display-name>
+    <servlet-name>EMServletUpdate</servlet-name>
+    <servlet-class>em.web.servlet.EMServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EMServletUpdate</servlet-name>
+    <url-pattern>/EMServletUpdate</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -188,6 +254,28 @@
   <servlet-mapping>
     <servlet-name>IndustryServletDelete</servlet-name>
     <url-pattern>/IndustryServletDelete</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WMServletDelete</display-name>
+    <servlet-name>WMServletDelete</servlet-name>
+    <servlet-class>wm.web.servlet.WMServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WMServletDelete</servlet-name>
+    <url-pattern>/WMServletDelete</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>EMServletDelete</display-name>
+    <servlet-name>EMServletDelete</servlet-name>
+    <servlet-class>em.web.servlet.EMServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EMServletDelete</servlet-name>
+    <url-pattern>/EMServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -279,6 +367,39 @@
   <servlet-mapping>
     <servlet-name>FindIndustry</servlet-name>
     <url-pattern>/FindIndustry</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>FindCompany</display-name>
+    <servlet-name>FindCompany</servlet-name>
+    <servlet-class>company.web.servlet.FindCompany</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindCompany</servlet-name>
+    <url-pattern>/FindCompany</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>FindWM</display-name>
+    <servlet-name>FindWM</servlet-name>
+    <servlet-class>wm.web.servlet.FindWM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindWM</servlet-name>
+    <url-pattern>/FindWM</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>FindEM</display-name>
+    <servlet-name>FindEM</servlet-name>
+    <servlet-class>em.web.servlet.FindEM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindEM</servlet-name>
+    <url-pattern>/FindEM</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

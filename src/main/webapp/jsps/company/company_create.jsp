@@ -21,10 +21,19 @@
   </head>
   
   <body>
-  <h1>Create Company</h1>
+  <h1>Company Create</h1>
 <form action="<c:url value='/CompanyServletCreate'/>" method="post">
-	Update id: <input type="text" name="id" value="${form.id}"/>
+	id			:<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>
+	<br/>
+	industry_id	：<input type="text" name="industry_id" value="${form.industry_id }"/>
+	<span style="color: red; font-weight: 900">${errors.industry_id }</span>
+	<br/>
+	company_name	：<input type="text" name="company_name" value="${form.company_name }"/>
+	<span style="color: red; font-weight: 900">${errors.company_name }</span>
+	<br/>
+	company_emission:<input type="text" name="company_emission" value="${form.company_emission }"/>
+	<span style="color: red; font-weight: 900">${errors.company_emission }</span>
 	<br/>
 	<input type="submit" value="Create Company"/>
 </form>

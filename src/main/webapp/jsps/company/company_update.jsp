@@ -27,15 +27,6 @@
 	id: <input type="text" name="id" value="${form.id}"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	country_id	：<input type="text" name="country_id" value="${form.country_id }"/>
-	<span style="color: red; font-weight: 900">${errors.country_id }</span>
-	<br/>
-	company_name	：<input type="text" name="company_name" value="${form.company_name }"/>
-	<span style="color: red; font-weight: 900">${errors.company_name }</span>
-	<br/>
-	company_emission:<input type="text" name="company_emission" value="${form.company_emission }"/>
-	<span style="color: red; font-weight: 900">${errors.company_emission }</span>
-	<br/>
 	<input type="submit" value="Update Company"/>
 </form>
   </body>

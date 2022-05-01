@@ -32,7 +32,7 @@
     <br/>
     <a href="<c:url value='/FindIndustry'/>" target="body">Please list all the industry in the table</a>&nbsp;&nbsp;
     <br/>
-        <a href="<c:url value='/FindIndustry'/>" target="body">Please list all the company in the table</a>&nbsp;&nbsp;
+        <a href="<c:url value='/FindCompany'/>" target="body">Please list all the company in the table</a>&nbsp;&nbsp;
     <br/>
   </body>
 </html>
