@@ -80,6 +80,17 @@
     <url-pattern>/Energy_managementServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>Carbon_emission_targetServletCreate</display-name>
+    <servlet-name>Carbon_emission_targetServletCreate</servlet-name>
+    <servlet-class>carbon_emission_target.web.servlet.Carbon_emission_targetServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_emission_targetServletCreate</servlet-name>
+    <url-pattern>/Carbon_emission_targetServletCreate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>CompanyServletRead</display-name>
@@ -144,6 +155,17 @@
   <servlet-mapping>
     <servlet-name>Energy_managementServletRead</servlet-name>
     <url-pattern>/Energy_managementServletRead</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>Carbon_emission_targetServletRead</display-name>
+    <servlet-name>Carbon_emission_targetServletRead</servlet-name>
+    <servlet-class>carbon_emission_target.web.servlet.Carbon_emission_targetServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_emission_targetServletRead</servlet-name>
+    <url-pattern>/Carbon_emission_targetServletRead</url-pattern>
   </servlet-mapping>
   
     <servlet>
@@ -211,6 +233,17 @@
     <servlet-name>Energy_managementServletUpdate</servlet-name>
     <url-pattern>/Energy_managementServletUpdate</url-pattern>
   </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>Carbon_emission_targetServletUpdate</display-name>
+    <servlet-name>Carbon_emission_targetServletUpdate</servlet-name>
+    <servlet-class>carbon_emission_target.web.servlet.Carbon_emission_targetServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_emission_targetServletUpdate</servlet-name>
+    <url-pattern>/Carbon_emission_targetServletUpdate</url-pattern>
+  </servlet-mapping>
   
     <servlet>
     <description></description>
@@ -276,6 +309,17 @@
   <servlet-mapping>
     <servlet-name>Energy_managementServletDelete</servlet-name>
     <url-pattern>/Energy_managementServletDelete</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>Carbon_emission_targetServletDelete</display-name>
+    <servlet-name>Carbon_emission_targetServletDelete</servlet-name>
+    <servlet-class>carbon_emission_target.web.servlet.Carbon_emission_targetServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Carbon_emission_targetServletDelete</servlet-name>
+    <url-pattern>/Carbon_emission_targetServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -400,6 +444,17 @@
   <servlet-mapping>
     <servlet-name>FindEnergy_management</servlet-name>
     <url-pattern>/FindEnergy_management</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>FindCarbon_emission_target</display-name>
+    <servlet-name>FindCarbon_emission_target</servlet-name>
+    <servlet-class>carbon_emission_target.web.servlet.FindCarbon_emission_target</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindCarbon_emission_target</servlet-name>
+    <url-pattern>/FindCarbon_emission_target</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

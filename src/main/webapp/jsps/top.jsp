@@ -48,8 +48,9 @@
 			<a href="<c:url value='/jsps/city/citymenu.jsp'/>" target="_parent">CRUD for City</a>	|&nbsp; 
 			<a href="<c:url value='/jsps/industry/industry_menu.jsp'/>" target="_parent">CRUD for Industry</a>	|&nbsp; 
 			<a href="<c:url value='/jsps/company/company_menu.jsp'/>" target="_parent">CRUD for Company</a>	|&nbsp; 
-			<a href="<c:url value='/jsps/energy_management/energy_management_menu.jsp'/>" target="_parent">CRUD for Energy Management</a>	|&nbsp;
-			<a href="<c:url value='/jsps/waste_management/waste_management_menu.jsp'/>" target="_parent">CRUD for Waste Management</a>	|&nbsp; 
+			<a href="<c:url value='/jsps/energy_management/energy_management_menu.jsp'/>" target="_parent">CRUD for Energy</a>	|&nbsp;
+			<a href="<c:url value='/jsps/waste_management/waste_management_menu.jsp'/>" target="_parent">CRUD for Waste</a>	|&nbsp; 
+			<a href="<c:url value='/jsps/carbon_emission_target/carbon_emission_target_menu.jsp'/>" target="_parent">CRUD for Emission Target</a>	|&nbsp;
 		</c:otherwise>
 	</c:choose>
 
