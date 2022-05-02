@@ -17,13 +17,13 @@ public class Energy_management {
 	private Float energy_consumption;
 	private Float energy_management;
 	/**
-	 * @return the id
+	 * @return the em_id
 	 */
 	public Integer getEm_id() {
 		return em_id;
 	}
 	/**
-	 * @param id the id to set
+	 * @param em_id the em_id to set
 	 */
 	public void setEm_id(Integer em_id) {
 		this.em_id = em_id;
@@ -76,4 +76,5 @@ public class Energy_management {
 	public void setEnergy_management(Float energy_management) {
 		this.energy_management = energy_management;
 	}
+
 }

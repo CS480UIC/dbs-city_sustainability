@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update Waste Management Entity</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update Waste Management Entity</h1>
-<form action="<c:url value='/WMServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update wm_id:  <input type="text" name="wm_id" value="${form.wm_id }"/>
-	<span style="color: red; font-weight: 900">${errors.wm_id }</span>
-	<br/><br/>
-	<input type="submit" value="Update Entity"/>
-</form>
+    <h1>CRUD operations for Waste Management</h1>
+    <br>
+	<a href="<c:url value='/jsps/waste_management/waste_management_create.jsp'/>" target="_parent">Create Waste Management</a> |&nbsp; 
+	<a href="<c:url value='/jsps/waste_management/waste_management_read.jsp'/>" target="_parent">Read Waste Management</a> |&nbsp;
+	<a href="<c:url value='/jsps/waste_management/waste_management_update.jsp'/>" target="_parent">Update Waste Management</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/waste_management/waste_management_delete.jsp'/>" target="_parent">Delete Waste Management</a>	
+	    
   </body>
 </html>

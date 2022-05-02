@@ -36,5 +36,7 @@
     <br/>
     <a href="<c:url value='/FindEnergy_management'/>" target="body">Please list all the energy management in the table</a>&nbsp;&nbsp;
     <br/>
+    <a href="<c:url value='/FindWaste_management'/>" target="body">Please list all the waste management in the table</a>&nbsp;&nbsp;
+    <br/>
   </body>
 </html>

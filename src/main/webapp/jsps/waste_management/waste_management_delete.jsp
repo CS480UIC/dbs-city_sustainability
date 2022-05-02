@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Waste Management Entity</title>
+    <title>Delete Waste Management</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete Waste Management Entity</h1>
-<form action="<c:url value='/WMServletDelete'/>" method="post">
+  <h1>Delete Waste Management</h1>
+<form action="<c:url value='/Waste_managementServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete wm_id:  <input type="text" name="wm_id" value="${form.wm_id }"/>
 	<span style="color: red; font-weight: 900">${errors.wm_id }</span>
 	<br/><br/>
-	<input type="submit" value="Delete Entity"/>
+	<input type="submit" value="Delete Waste Management"/>
 </form>
   </body>
 </html>

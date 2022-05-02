@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Waste Management Entity</title>
+    <title>Delete Waste Management</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,20 +21,19 @@
   </head>
   
   <body>
-  <h1>Read Waste Management Entity</h1>
+  <h1>Delete Waste Management</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Read wm_id:  <input type="text" name="wm_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/><br/>
-<!-- <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+<form action="<c:url value='/Waste_managementServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="wm_id" value="${waste_management.wm_id }"/>
+	wm_city_id	   :<input type="text" name="wm_city_id" value="${waste_management.city_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%> -->
-	<input type="submit" value="Read Entity"/>
+	pollution_rate	：<input type="text" name="pollution_rate" value="${waste_management.pollution_rate }" disabled/>
+	<br/>
+	recycle_rate	：<input type="text" name="recycle_rate" value="${waste_management.recycle_rate }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Waste Management"/>
 </form>
-  </body>
+
+</body>
 </html>

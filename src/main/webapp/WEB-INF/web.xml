@@ -62,7 +62,7 @@
     <description></description>
     <display-name>Waste_managementServletCreate</display-name>
     <servlet-name>Waste_managementServletCreate</servlet-name>
-    <servlet-class>.web.servlet.Waste_managementServletCreate</servlet-class>
+    <servlet-class>waste_management.web.servlet.Waste_managementServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Waste_managementServletCreate</servlet-name>
@@ -128,7 +128,7 @@
     <description></description>
     <display-name>Waste_managementServletRead</display-name>
     <servlet-name>Waste_managementServletRead</servlet-name>
-    <servlet-class>.web.servlet.Waste_managementServletRead</servlet-class>
+    <servlet-class>waste_management.web.servlet.Waste_managementServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Waste_managementServletRead</servlet-name>
@@ -194,7 +194,7 @@
     <description></description>
     <display-name>Waste_managementServletUpdate</display-name>
     <servlet-name>Waste_managementServletUpdate</servlet-name>
-    <servlet-class>.web.servlet.Waste_managementServletUpdate</servlet-class>
+    <servlet-class>waste_management.web.servlet.Waste_managementServletUpdate</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Waste_managementServletUpdate</servlet-name>
@@ -260,7 +260,7 @@
     <description></description>
     <display-name>Waste_managementServletDelete</display-name>
     <servlet-name>Waste_managementServletDelete</servlet-name>
-    <servlet-class>.web.servlet.Waste_managementServletDelete</servlet-class>
+    <servlet-class>waste_management.web.servlet.Waste_managementServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Waste_managementServletDelete</servlet-name>
@@ -384,7 +384,7 @@
     <description></description>
     <display-name>FindWaste_management</display-name>
     <servlet-name>FindWaste_management</servlet-name>
-    <servlet-class>.web.servlet.FindWaste_management</servlet-class>
+    <servlet-class>waste_management.web.servlet.FindWaste_management</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FindWaste_management</servlet-name>
