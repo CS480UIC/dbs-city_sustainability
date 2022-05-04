@@ -1,33 +1,32 @@
-package carbon_emission_target.web.servlet;
+package transportation.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import carbon_emission_target.domain.Carbon_emission_target;
-import carbon_emission_target.service.Carbon_emission_targetException;
-import carbon_emission_target.service.Carbon_emission_targetService;
+import transportation.domain.Transportation;
+import transportation.service.TransportationException;
+import transportation.service.TransportationService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Carbon_emission_targetServletCreate extends HttpServlet {
+public class TransportationServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Carbon_emission_targetServletCreate() {
+    public TransportationServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,9 +42,9 @@ public class Carbon_emission_targetServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Carbon_emission_targetService entity1service = new Carbon_emission_targetService();
+		TransportationService entity1service = new TransportationService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Carbon_emission_target form = new Carbon_emission_target();
+		Transportation form = new Transportation();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
@@ -61,17 +60,17 @@ public class Carbon_emission_targetServletCreate extends HttpServlet {
 		
 //		System.out.println("INFO CONTENTS: " + info);
 
-		form.setCet_id(Integer.parseInt(info.get(0)));
-		
-		form.setCity_id(Integer.parseInt(info.get(1)));
-		
-		form.setBase_year(java.sql.Date.valueOf(info.get(2)));
+		form.setIdtransportation_id(Integer.parseInt(info.get(0)));
 
-		form.setBase_emission(Float.parseFloat(info.get(3)));		
+		form.setTarget_id(Integer.parseInt(info.get(1)));
 
-		form.setTarget_year(java.sql.Date.valueOf(info.get(4)));
+		form.setCar_population(Float.parseFloat(info.get(2)));
 		
-		form.setTarget_emission(Float.parseFloat(info.get(5)));
+		form.setCar_emission(Float.parseFloat(info.get(3)));
+		
+		form.setPublic_usage(Float.parseFloat(info.get(4)));
+		
+		form.setPublic_emission(Float.parseFloat(info.get(5)));
 		
 		try {
 			//System.out.println("3");
@@ -79,7 +78,7 @@ public class Carbon_emission_targetServletCreate extends HttpServlet {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Carbon_emission_targetException e) {
+		} catch (ClassNotFoundException | TransportationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

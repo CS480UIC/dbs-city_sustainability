@@ -16,7 +16,7 @@
 		<th>Company Name</th>
 		<th>Industry Emission</th>
 	</tr>
-<c:forEach items="${Company List}" var="company">
+<c:forEach items="${CompanyList}" var="company">
 	<tr>
 		<td>${company.id}</td>
 		<td>${company.industry_id}</td>

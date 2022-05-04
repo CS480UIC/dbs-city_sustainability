@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Transporation Entity:</title>
+    <title>Update Transporation :</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='/TransporationServletUpdate'/>" method="post">
+  <h1>Update Transportation</h1>
+<form action="<c:url value='/TransportationServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update transportation_id:  <input type="text" name="transportation_id" value="${form.transporation_id }"/>
-	<span style="color: red; font-weight: 900">${errors.transportation_id }</span>
+	Update transportation_id:  <input type="text" name="idtransportation_id" value="${form.idtransporation_id }"/>
+	<span style="color: red; font-weight: 900">${errors.idtransportation_id }</span>
 	<br/>
-	<input type="submit" value="Update Entity"/>
+	<input type="submit" value="Update Transportation"/>
 </form>
   </body>
 </html>

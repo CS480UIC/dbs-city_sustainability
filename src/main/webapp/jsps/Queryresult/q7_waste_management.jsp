@@ -16,10 +16,10 @@
 		<th>Pollution Rate</th>
 		<th>Recycle Rate</th>
 	</tr>
-<c:forEach items="${Waste_management List}" var="waste_management">
+<c:forEach items="${Waste_managementList}" var="waste_management">
 	<tr>
-		<td>${waste_management.em_id}</td>
-		<td>${waste_management.em_city_id}</td>
+		<td>${waste_management.wm_id}</td>
+		<td>${waste_management.city_id}</td>
 		<td>${waste_management.pollution_rate}</td>
 		<td>${waste_management.recycle_rate}</td>
 	</tr>

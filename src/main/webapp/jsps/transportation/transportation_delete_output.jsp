@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Transporation:</title>
+    <title>Delete Transportation</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +22,22 @@
   
   <body>
   <h1>Delete Transportation</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/TransportationServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete transportation_id:  <input type="text" name="idtransportation_id" value="${form.idtransportation_id }"/>
-	<span style="color: red; font-weight: 900">${errors.idtransportation_id }</span>
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="idtransportation_id" value="${transportation.idtransportation_id }"/>
+	target_id	   :<input type="text" name="target_id" value="${transportation.target_id }" disabled/>
+	<br/>
+	car_population	：<input type="text" name="car_population" value="${transportation.car_population }" disabled/>
+	<br/>
+	car_emission	：<input type="text" name="car_emission" value="${transportation.car_emission }" disabled/>
+	<br/>
+	public_usage	：<input type="text" name="public_usage" value="${transportation.public_usage }" disabled/>
+	<br/>
+	public_emission	：<input type="text" name="public_emission" value="${transportation.public_emission }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Transportation"/>
 </form>
-  </body>
+
+</body>
 </html>

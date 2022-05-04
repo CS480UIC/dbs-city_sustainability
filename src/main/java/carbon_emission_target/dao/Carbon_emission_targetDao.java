@@ -37,9 +37,9 @@ public class Carbon_emission_targetDao {
 		    	if(id_ == cet_id) {
 		    		carbon_emission_target.setCet_id(id_);
 		    		carbon_emission_target.setCity_id(Integer.parseInt(resultSet.getString("cet_city_id")));
-		    		carbon_emission_target.setBase_year(Integer.parseInt(resultSet.getString("base_year")));
+		    		carbon_emission_target.setBase_year(java.sql.Date.valueOf(resultSet.getString("base_year")));
 		    		carbon_emission_target.setBase_emission(Float.parseFloat(resultSet.getString("base_emission")));
-		    		carbon_emission_target.setTarget_year(Integer.parseInt(resultSet.getString("target_year")));
+		    		carbon_emission_target.setTarget_year(java.sql.Date.valueOf(resultSet.getString("target_year")));
 		    		carbon_emission_target.setTarget_emission(Float.parseFloat(resultSet.getString("target_emission")));
 		    	}
 		    }
@@ -68,9 +68,9 @@ public class Carbon_emission_targetDao {
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getCet_id());
 		    preparestatement.setInt(2,form.getCity_id());
-		    preparestatement.setInt(3,form.getBase_year());
+		    preparestatement.setDate(3,form.getBase_year());
 		    preparestatement.setFloat(4,form.getBase_emission());
-		    preparestatement.setInt(5,form.getTarget_year());
+		    preparestatement.setDate(5,form.getTarget_year());
 		    preparestatement.setFloat(6,form.getTarget_emission());
 		    preparestatement.executeUpdate();
 		    connect.close();
@@ -91,9 +91,9 @@ public class Carbon_emission_targetDao {
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
 		    preparestatement.setInt(1,form.getCity_id());
-		    preparestatement.setInt(2,form.getBase_year());
+		    preparestatement.setDate(2,form.getBase_year());
 		    preparestatement.setFloat(3,form.getBase_emission());
-		    preparestatement.setInt(4,form.getTarget_year());
+		    preparestatement.setDate(4,form.getTarget_year());
 		    preparestatement.setFloat(5,form.getTarget_emission());
 		    preparestatement.setInt(6,form.getCet_id());
 		    preparestatement.executeUpdate();
@@ -115,9 +115,9 @@ public class Carbon_emission_targetDao {
 				Carbon_emission_target carbon_emission_target = new Carbon_emission_target();
 	    		carbon_emission_target.setCet_id(Integer.parseInt(resultSet.getString("cet_id")));
 	    		carbon_emission_target.setCity_id(Integer.parseInt(resultSet.getString("cet_city_id")));
-	    		carbon_emission_target.setBase_year(Integer.parseInt(resultSet.getString("base_year")));
+	    		carbon_emission_target.setBase_year(java.sql.Date.valueOf(resultSet.getString("base_year")));
 	    		carbon_emission_target.setBase_emission(Float.parseFloat(resultSet.getString("base_emission")));
-	    		carbon_emission_target.setTarget_year(Integer.parseInt(resultSet.getString("target_year")));
+	    		carbon_emission_target.setTarget_year(java.sql.Date.valueOf(resultSet.getString("target_year")));
 	    		carbon_emission_target.setTarget_emission(Float.parseFloat(resultSet.getString("target_emission")));
 				list.add(carbon_emission_target);
 			 }

@@ -51,6 +51,7 @@
 			<a href="<c:url value='/jsps/energy_management/energy_management_menu.jsp'/>" target="_parent">CRUD for Energy</a>	|&nbsp;
 			<a href="<c:url value='/jsps/waste_management/waste_management_menu.jsp'/>" target="_parent">CRUD for Waste</a>	|&nbsp; 
 			<a href="<c:url value='/jsps/carbon_emission_target/carbon_emission_target_menu.jsp'/>" target="_parent">CRUD for Emission Target</a>	|&nbsp;
+			<a href="<c:url value='/jsps/transportation/transportation_menu.jsp'/>" target="_parent">CRUD for Transportation</a>
 		</c:otherwise>
 	</c:choose>
 

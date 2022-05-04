@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Transportation Create</title>
+    <title>Create Transportation</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,27 +21,27 @@
   </head>
   
   <body>
-  <h1>Create Transporation Entity:</h1>
+  <h1>Create Transporation:</h1>
 <form action="<c:url value='/TransportationServletCreate'/>" method="post">
-	transporation_id:<input type="text" name="transporation_id" value="${form.transporation_id }"/>
-	<span style="color: red; font-weight: 900">${errors.transporation_id }</span>
+	idtransporation_id:<input type="text" name="idtransporation_id" value="${form.idtransporation_id }"/>
+	<span style="color: red; font-weight: 900">${errors.idtransporation_id }</span>
 	<br/>
 	target_id       ：<input type="text" name="target_id" value="${form.target_id }"/>
 	<span style="color: red; font-weight: 900">${errors.target_id }</span>
 	<br/>
-	car_population	：<input type="text" name="target_id" value="${form.car_population }"/>
+	car_population	：<input type="text" name="car_population" value="${form.car_population }"/>
 	<span style="color: red; font-weight: 900">${errors.car_population }</span>
 	<br/>
-	car_emission	：<input type="text" name="target_id" value="${form.car_emission }"/>
+	car_emission	：<input type="text" name="car_emission" value="${form.car_emission }"/>
 	<span style="color: red; font-weight: 900">${errors.car_emission }</span>
 	<br/>
-	public_usage	：<input type="text" name="target_id" value="${form.public_usage }"/>
+	public_usage	：<input type="text" name="public_usage" value="${form.public_usage }"/>
 	<span style="color: red; font-weight: 900">${errors.public_usage }</span>
 	<br/>
-	public_emission	：<input type="text" name="target_id" value="${form.public_emission }"/>
+	public_emission	：<input type="text" name="public_emission" value="${form.public_emission }"/>
 	<span style="color: red; font-weight: 900">${errors.public_emission }</span>
 	<br/>
-	<input type="submit" value="Create Transportation Entity"/>
+	<input type="submit" value="Create Transportation"/>
 </form>
   </body>
 </html>

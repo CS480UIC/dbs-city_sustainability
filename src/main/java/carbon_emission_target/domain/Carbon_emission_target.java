@@ -1,5 +1,7 @@
 package carbon_emission_target.domain;
 
+import java.sql.Date;
+import java.time.Year;
 /**
  * User object
  * 
@@ -13,9 +15,9 @@ public class Carbon_emission_target {
 	
 	private Integer cet_id;
 	private Integer city_id;
-	private Integer base_year; 
+	private Date base_year; 
 	private Float base_emission;
-	private Integer target_year;
+	private Date target_year;
 	private Float target_emission;
 	/**
 	 * @return the cet_id
@@ -44,13 +46,13 @@ public class Carbon_emission_target {
 	/**
 	 * @return the base_year
 	 */
-	public Integer getBase_year() {
+	public Date getBase_year() {
 		return base_year;
 	}
 	/**
 	 * @param base_year the base_year to set
 	 */
-	public void setBase_year(Integer base_year) {
+	public void setBase_year(Date base_year) {
 		this.base_year = base_year;
 	}
 	/**
@@ -68,13 +70,13 @@ public class Carbon_emission_target {
 	/**
 	 * @return the target_year
 	 */
-	public Integer getTarget_year() {
+	public Date getTarget_year() {
 		return target_year;
 	}
 	/**
 	 * @param target_year the target_year to set
 	 */
-	public void setTarget_year(Integer target_year) {
+	public void setTarget_year(Date target_year) {
 		this.target_year = target_year;
 	}
 	/**

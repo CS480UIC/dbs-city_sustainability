@@ -18,7 +18,7 @@
 		<th>Target Year</th>
 		<th>Target Emission</th>
 	</tr>
-<c:forEach items="${Carbon_emission_target List}" var="carbon_emission_target">
+<c:forEach items="${Carbon_emission_targetList}" var="carbon_emission_target">
 	<tr>
 		<td>${carbon_emission_target.cet_id}</td>
 		<td>${carbon_emission_target.cet_city_id}</td>

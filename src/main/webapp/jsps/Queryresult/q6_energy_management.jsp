@@ -17,10 +17,10 @@
 		<th>Energy Consumption</th>
 		<th>Energy Management</th>
 	</tr>
-<c:forEach items="${Energy_management List}" var="energy_management">
+<c:forEach items="${Energy_managementList}" var="energy_management">
 	<tr>
 		<td>${energy_management.em_id}</td>
-		<td>${energy_management.em_city_id}</td>
+		<td>${energy_management.city_id}</td>
 		<td>${energy_management.energy_production}</td>
 		<td>${energy_management.energy_consumption}</td>
 		<td>${energy_management.energy_management}</td>

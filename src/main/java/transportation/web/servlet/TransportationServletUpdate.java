@@ -1,4 +1,4 @@
-package carbon_emission_target.web.servlet;
+package transportation.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,21 +11,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import carbon_emission_target.dao.Carbon_emission_targetDao;
-import carbon_emission_target.domain.Carbon_emission_target;
-//import entity1.service.Carbon_emission_targetService;
+import transportation.dao.TransportationDao;
+import transportation.domain.Transportation;
+//import entity1.service.TransportationService;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Carbon_emission_targetServletUpdate extends HttpServlet {
+public class TransportationServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Carbon_emission_targetServletUpdate() {
+    public TransportationServletUpdate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,13 +43,13 @@ public class Carbon_emission_targetServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //
 		String method = request.getParameter("method");
-		Carbon_emission_targetDao carbon_emission_targetdao = new Carbon_emission_targetDao();
-		Carbon_emission_target carbon_emission_target = null;
+		TransportationDao transportationdao = new TransportationDao();
+		Transportation transportation = null;
 		
 		if(method.equals("search"))
 		{
 			try {
-				carbon_emission_target = carbon_emission_targetdao.findCarbon_emission_targetId(Integer.parseInt(request.getParameter("id")));
+				transportation = transportationdao.findById(Integer.parseInt(request.getParameter("idtransportation_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -58,25 +58,25 @@ public class Carbon_emission_targetServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-//			Carbon_emission_targetService carbon_emission_targetService = new Carbon_emission_targetService();		
-			if(carbon_emission_target.getCet_id()!=null){
+//			TransportationService transportationService = new TransportationService();		
+			if(transportation.getIdtransportation_id()!=null){
 				System.out.println("11");
 
-						//System.out.println(carbon_emission_target);
-						request.setAttribute("carbon_emission_target", carbon_emission_target);
-						request.getRequestDispatcher("/jsps/carbon_emission_target/carbon_emission_target_update_output.jsp").forward(request, response);
+						//System.out.println(transportation);
+						request.setAttribute("transportation", transportation);
+						request.getRequestDispatcher("/jsps/transportation/transportation_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
-				request.setAttribute("msg", "Carbon_emission_target not found");
-				request.getRequestDispatcher("/jsps/carbon_emission_target/carbon_emission_target_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Transportation not found");
+				request.getRequestDispatcher("/jsps/transportation/transportation_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Carbon_emission_target form = new Carbon_emission_target();
+			Transportation form = new Transportation();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -89,15 +89,15 @@ public class Carbon_emission_targetServletUpdate extends HttpServlet {
 //			form.setEmail(info.get(3));
 //			form.setUsername(request.getParameter("username"));
 			
-			form.setCet_id(Integer.parseInt(info.get(1)));
-			form.setCity_id(Integer.parseInt(info.get(2)));
-			form.setBase_year(java.sql.Date.valueOf(info.get(3)));
-			form.setBase_emission(Float.parseFloat(info.get(4)));
-			form.setTarget_year(java.sql.Date.valueOf(info.get(5)));
-			form.setBase_emission(Float.parseFloat(info.get(6)));
+			form.setIdtransportation_id(Integer.parseInt(info.get(1)));
+			form.setTarget_id(Integer.parseInt(info.get(2)));
+			form.setCar_population(Float.parseFloat(info.get(3)));	
+			form.setCar_emission(Float.parseFloat(info.get(4)));
+			form.setPublic_usage(Float.parseFloat(info.get(5)));	
+			form.setPublic_emission(Float.parseFloat(info.get(6)));
 
 			try {
-				carbon_emission_targetdao.update(form);
+				transportationdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -106,8 +106,8 @@ public class Carbon_emission_targetServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Carbon_emission_target Updated");
-			request.getRequestDispatcher("/jsps/carbon_emission_target/carbon_emission_target_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Transportation Updated");
+			request.getRequestDispatcher("/jsps/transportation/transportation_read_output.jsp").forward(request, response);
 		}
 	}
 }

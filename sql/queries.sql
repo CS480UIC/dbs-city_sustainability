@@ -32,9 +32,9 @@
 	SELECT YEAR(target_year) FROM carbon_emission_target
 	WHERE target_year < 2025;
 
-	CREATE VIEW numeric_industry AS
-	SELECT AVG(industry_emission) FROM industry
-	GROUP BY industry_name;
+    CREATE VIEW numeric_industry AS
+	SELECT id, country_id, AVG(industry_emission) FROM industry
+	GROUP BY country_id;
     
     	CREATE VIEW complex_company_industry AS
 	SELECT * FROM company JOIN industry
