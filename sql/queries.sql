@@ -12,6 +12,11 @@
 	SELECT * FROM country
 	WHERE (country_name IN ('United States', 'Mexico', 'Canada'))
 	ORDER BY country_name ASC;
+	
+	CREATE VIEW simple_transportation AS
+	SELECT * FROM transportation
+	WHERE car_emission > public_emission
+	ORDER BY target_id ASC;
 
 	CREATE VIEW simple_cet AS
 	SELECT * FROM carbon_emission_target
@@ -43,7 +48,11 @@
 	CREATE VIEW complex_transportation_cet AS
 	SELECT * FROM carbon_emission_target JOIN transportation
 	ON (cet_id = target_id);
-
+	
+	CREATE VIEW complex_country AS
+	SELECT * FROM country JOIN industry
+	ON (cet_id = target_id);
+	
 	CREATE VIEW subquery_city AS
 	SELECT city_name FROM city C
 	WHERE city_population <= (SELECT AVG(population) FROM city WHERE city.country_id = c.country_id);
